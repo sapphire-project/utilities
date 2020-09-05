@@ -64,20 +64,138 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
-					<div style="text-align:center;"><h1>@sapphire/snowflake</h1>
-					<h3>Deconstructs and generates snoflake IDs using BigInts</h3></div>
+					<div style="text-align:center;">
+						<h1>@sapphire/snowflake</h1>
+						<h3>Deconstructs and generates snowflake IDs using BigInts</h3>
+					</div>
 					<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
 						<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
-						<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript"></a>
+						<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
 						<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
 						<a href="https://bundlephobia.com/result?p=@sapphire/snowflake"><img src="https://img.shields.io/bundlephobia/min/@sapphire/snowflake?logo=webpack&style=flat-square" alt="npm bundle size"></a>
 						<a href="https://www.npmjs.com/package/@sapphire/snowflake"><img src="https://img.shields.io/npm/v/@sapphire/snowflake?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
 					<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15202"><img src="https://badges.depfu.com/badges/34035e3cf4ced0737443671ebefa2f47/count.svg" alt="Depfu"></a></p>
+					<p><strong>Table of Contents</strong></p>
+					<ul>
+						<li><a href="#installation">Installation</a></li>
+						<li><a href="#usage">Usage</a><ul>
+								<li><a href="#constructing-snowflakes">Constructing snowflakes</a><ul>
+										<li><a href="#snowflakes-with-custom-epoch">Snowflakes with custom epoch</a></li>
+										<li><a href="#snowflake-with-discord-epoch-constant">Snowflake with Discord epoch constant</a></li>
+										<li><a href="#snowflake-with-twitter-epoch-constant">Snowflake with Twitter epoch constant</a></li>
+									</ul>
+								</li>
+								<li><a href="#deconstructing-snowflakes">Deconstructing snowflakes</a><ul>
+										<li><a href="#snowflakes-with-custom-epoch-1">Snowflakes with custom epoch</a></li>
+										<li><a href="#snowflake-with-discord-epoch-constant-1">Snowflake with Discord epoch constant</a></li>
+										<li><a href="#snowflake-with-twitter-epoch-constant-1">Snowflake with Twitter epoch constant</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#api-documentation">API Documentation</a></li>
+						<li><a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
+						<li><a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
+					</ul>
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
 					</a>
-					<p><strong>Then install <code>@sapphire/snowflake</code></strong></p>
-					<pre><code class="language-sh">yarn add @sapphire/snowflake</code></pre>
+					<pre><code class="language-sh">npm install @sapphire/snowflake
+yarn add @sapphire/snowflake</code></pre>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h2>Usage</h2>
+					</a>
+					<p><strong>Note:</strong> While this section uses <code>require</code>, the imports match 1:1 with ESM imports. For example <code>const { Snowflake } = require(&#39;@sapphire/snowflake&#39;)</code> equals <code>import { Snowflake } from &#39;@sapphire/snowflake&#39;</code>.</p>
+					<a href="#constructing-snowflakes" id="constructing-snowflakes" style="color: inherit; text-decoration: none;">
+						<h3>Constructing snowflakes</h3>
+					</a>
+					<a href="#snowflakes-with-custom-epoch" id="snowflakes-with-custom-epoch" style="color: inherit; text-decoration: none;">
+						<h4>Snowflakes with custom epoch</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { Snowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Define a custom epoch</span>
+<span class="hljs-keyword">const</span> epoch = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;2000-01-01T00:00:00.000Z&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> snowflake = <span class="hljs-keyword">new</span> Snowflake(epoch);
+
+<span class="hljs-comment">// Generate a snowflake with the given epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = snowflake.generate();</code></pre>
+					<a href="#snowflake-with-discord-epoch-constant" id="snowflake-with-discord-epoch-constant" style="color: inherit; text-decoration: none;">
+						<h4>Snowflake with Discord epoch constant</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { DiscordSnowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> discordSnowflake = <span class="hljs-keyword">new</span> DiscordSnowflake();
+
+<span class="hljs-comment">// Generate a snowflake with Discord&#x27;s epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = discordSnowflake.generate();
+
+<span class="hljs-comment">// Alternatively, you can use the method directly</span>
+<span class="hljs-keyword">const</span> uniqueId = DiscordSnowflake.generate();</code></pre>
+					<a href="#snowflake-with-twitter-epoch-constant" id="snowflake-with-twitter-epoch-constant" style="color: inherit; text-decoration: none;">
+						<h4>Snowflake with Twitter epoch constant</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { TwitterSnowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> twitterSnowflake = <span class="hljs-keyword">new</span> TwitterSnowflake();
+
+<span class="hljs-comment">// Generate a snowflake with Twitter&#x27;s epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = twitterSnowflake.generate();
+
+<span class="hljs-comment">// Alternatively, you can use the method directly</span>
+<span class="hljs-keyword">const</span> uniqueId = TwitterSnowflake.generate();</code></pre>
+					<a href="#deconstructing-snowflakes" id="deconstructing-snowflakes" style="color: inherit; text-decoration: none;">
+						<h3>Deconstructing snowflakes</h3>
+					</a>
+					<a href="#snowflakes-with-custom-epoch-1" id="snowflakes-with-custom-epoch-1" style="color: inherit; text-decoration: none;">
+						<h4>Snowflakes with custom epoch</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { Snowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Define a custom epoch</span>
+<span class="hljs-keyword">const</span> epoch = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;2000-01-01T00:00:00.000Z&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> snowflake = <span class="hljs-keyword">new</span> Snowflake(epoch);
+
+<span class="hljs-comment">// Deconstruct a snowflake with the given epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = snowflake.deconstruct(<span class="hljs-string">&#x27;3971046231244935168&#x27;</span>);</code></pre>
+					<a href="#snowflake-with-discord-epoch-constant-1" id="snowflake-with-discord-epoch-constant-1" style="color: inherit; text-decoration: none;">
+						<h4>Snowflake with Discord epoch constant</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { DiscordSnowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> discordSnowflake = <span class="hljs-keyword">new</span> DiscordSnowflake();
+
+<span class="hljs-comment">// Deconstruct a snowflake with Discord&#x27;s epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = discordSnowflake.deconstruct(<span class="hljs-string">&#x27;3971046231244935168&#x27;</span>);
+
+<span class="hljs-comment">// Alternatively, you can use the method directly</span>
+<span class="hljs-keyword">const</span> uniqueId = DiscordSnowflake.deconstruct(<span class="hljs-string">&#x27;3971046231244935168&#x27;</span>);</code></pre>
+					<a href="#snowflake-with-twitter-epoch-constant-1" id="snowflake-with-twitter-epoch-constant-1" style="color: inherit; text-decoration: none;">
+						<h4>Snowflake with Twitter epoch constant</h4>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the Snowflake class</span>
+<span class="hljs-keyword">const</span> { TwitterSnowflake } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/snowflake&#x27;</span>);
+
+<span class="hljs-comment">// Create an instance of Snowflake</span>
+<span class="hljs-keyword">const</span> twitterSnowflake = <span class="hljs-keyword">new</span> TwitterSnowflake();
+
+<span class="hljs-comment">// Deconstruct a snowflake with Twitter&#x27;s epoch</span>
+<span class="hljs-keyword">const</span> uniqueId = twitterSnowflake.deconstruct(<span class="hljs-string">&#x27;3971046231244935168&#x27;</span>);
+
+<span class="hljs-comment">// Alternatively, you can use the method directly</span>
+<span class="hljs-keyword">const</span> uniqueId = TwitterSnowflake.deconstruct(<span class="hljs-string">&#x27;3971046231244935168&#x27;</span>);</code></pre>
 					<hr>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
@@ -88,7 +206,7 @@
 					</a>
 					<p>Sapphire Project is open source and always will be, even if we don&#39;t get donations. That said, we know there are amazing people who
 					may still want to donate just to show their appreciation. Thanks you very much in advance!</p>
-					<p>We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttoms below to donate through your method of choice.</p>
+					<p>We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
 					<table>
 						<thead>
 							<tr>
@@ -122,10 +240,10 @@
 					<!-- markdownlint-disable -->
 					<table>
 						<tr>
-							<td align="center"><a href="https://favware.tech/"><img src="https://avatars3.githubusercontent.com/u/4019718?v=4" width="100px;" alt=""/><br /><sub><b>Jeroen Claassens</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Code">💻</a> <a href="#infra-Favna" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-Favna" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Documentation">📖</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Tests">⚠️</a></td>
-							<td align="center"><a href="https://github.com/kyranet"><img src="https://avatars0.githubusercontent.com/u/24852502?v=4" width="100px;" alt=""/><br /><sub><b>Antonio Román</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Code">💻</a> <a href="#projectManagement-kyranet" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Akyranet" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Tests">⚠️</a></td>
-							<td align="center"><a href="https://github.com/PyroTechniac"><img src="https://avatars2.githubusercontent.com/u/39341355?v=4" width="100px;" alt=""/><br /><sub><b>Gryffon Bellish</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3APyroTechniac" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Tests">⚠️</a></td>
-							<td align="center"><a href="https://github.com/vladfrangu"><img src="https://avatars3.githubusercontent.com/u/17960496?v=4" width="100px;" alt=""/><br /><sub><b>Vlad Frangu</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/issues?q=author%3Avladfrangu" title="Bug reports">🐛</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Avladfrangu" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-vladfrangu" title="User Testing">📓</a> <a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://favware.tech/"><img src="https://avatars3.githubusercontent.com/u/4019718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Claassens</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Code">💻</a> <a href="#infra-Favna" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-Favna" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Documentation">📖</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/kyranet"><img src="https://avatars0.githubusercontent.com/u/24852502?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Román</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Code">💻</a> <a href="#projectManagement-kyranet" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Akyranet" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/PyroTechniac"><img src="https://avatars2.githubusercontent.com/u/39341355?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gryffon Bellish</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3APyroTechniac" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/vladfrangu"><img src="https://avatars3.githubusercontent.com/u/17960496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Frangu</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/issues?q=author%3Avladfrangu" title="Bug reports">🐛</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Avladfrangu" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-vladfrangu" title="User Testing">📓</a> <a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Tests">⚠️</a></td>
 						</tr>
 					</table>
 					<!-- markdownlint-enable -->
@@ -139,32 +257,21 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_snowflake.html#main" class="tsd-kind-icon">main</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_snowflake.discordsnowflake.html" class="tsd-kind-icon">Discord<wbr>Snowflake</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_snowflake.snowflake.html" class="tsd-kind-icon">Snowflake</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_snowflake.twittersnowflake.html" class="tsd-kind-icon">Twitter<wbr>Snowflake</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_snowflake.deconstructedsnowflake.html" class="tsd-kind-icon">Deconstructed<wbr>Snowflake</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_snowflake.snowflakegenerateoptions.html" class="tsd-kind-icon">Snowflake<wbr>Generate<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="main" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> main</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">main<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/e0e3ec5/packages/snowflake/src/index.ts#L1">snowflake/src/index.ts:1</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -184,17 +291,26 @@
 						<a href="_sapphire_snowflake.html">@sapphire/snowflake</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_sapphire_ts_config.html">@sapphire/ts-<wbr>config</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="_sapphire_utilities.html">@sapphire/utilities</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_sapphire_snowflake.html#main" class="tsd-kind-icon">main</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_snowflake.discordsnowflake.html" class="tsd-kind-icon">Discord<wbr>Snowflake</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_snowflake.snowflake.html" class="tsd-kind-icon">Snowflake</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_snowflake.twittersnowflake.html" class="tsd-kind-icon">Twitter<wbr>Snowflake</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_snowflake.deconstructedsnowflake.html" class="tsd-kind-icon">Deconstructed<wbr>Snowflake</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_snowflake.snowflakegenerateoptions.html" class="tsd-kind-icon">Snowflake<wbr>Generate<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
@@ -207,7 +323,6 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
@@ -215,6 +330,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>
