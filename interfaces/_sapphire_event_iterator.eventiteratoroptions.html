@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BucketEntry | Sapphire Utilities</title>
+	<title>EventIteratorOptions | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					<a href="../modules/_sapphire_event_iterator.html">@sapphire/event-iterator</a>
 				</li>
 				<li>
-					<a href="_sapphire_ratelimits.bucketentry.html">BucketEntry</a>
+					<a href="_sapphire_event_iterator.eventiteratoroptions.html">EventIteratorOptions</a>
 				</li>
 			</ul>
-			<h1>Interface BucketEntry</h1>
+			<h1>Interface EventIteratorOptions&lt;V&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,15 +68,23 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An entry in the bucket.</p>
+						<p>Options to be passed to an EventIterator.</p>
 					</div>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>V</h4>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BucketEntry</span>
+						<span class="target">EventIteratorOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -87,9 +95,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#lasttime" class="tsd-kind-icon">last<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#settime" class="tsd-kind-icon">set<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#tickets" class="tsd-kind-icon">tickets</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_event_iterator.eventiteratoroptions.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_event_iterator.eventiteratoroptions.html#idle" class="tsd-kind-icon">idle</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_event_iterator.eventiteratoroptions.html#limit" class="tsd-kind-icon">limit</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,34 +106,49 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lasttime" class="tsd-anchor"></a>
-					<h3>last<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">last<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="filter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> filter</h3>
+					<div class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">:</span> <a href="../modules/_sapphire_event_iterator.html#eventiteratorfilter" class="tsd-signature-type">EventIteratorFilter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/ratelimits/src/lib/Bucket.ts#L10">ratelimits/src/lib/Bucket.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/event-iterator/src/index.ts#L16">event-iterator/src/index.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The filter.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="settime" class="tsd-anchor"></a>
-					<h3>set<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="idle" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> idle</h3>
+					<div class="tsd-signature tsd-kind-icon">idle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/ratelimits/src/lib/Bucket.ts#L11">ratelimits/src/lib/Bucket.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/event-iterator/src/index.ts#L21">event-iterator/src/index.ts:21</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The timeout in ms before ending the EventIterator.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="tickets" class="tsd-anchor"></a>
-					<h3>tickets</h3>
-					<div class="tsd-signature tsd-kind-icon">tickets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="limit" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> limit</h3>
+					<div class="tsd-signature tsd-kind-icon">limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/ratelimits/src/lib/Bucket.ts#L12">ratelimits/src/lib/Bucket.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/event-iterator/src/index.ts#L26">event-iterator/src/index.ts:26</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The limit of events that pass the filter to iterate.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -141,10 +164,10 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -158,28 +181,28 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/_sapphire_ratelimits.bucket.html" class="tsd-kind-icon">Bucket</a>
+						<a href="../classes/_sapphire_event_iterator.eventiterator.html" class="tsd-kind-icon">Event<wbr>Iterator</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketentry.html" class="tsd-kind-icon">Bucket<wbr>Entry</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_sapphire_event_iterator.eventiteratoroptions.html" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#lasttime" class="tsd-kind-icon">last<wbr>Time</a>
+								<a href="_sapphire_event_iterator.eventiteratoroptions.html#filter" class="tsd-kind-icon">filter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#settime" class="tsd-kind-icon">set<wbr>Time</a>
+								<a href="_sapphire_event_iterator.eventiteratoroptions.html#idle" class="tsd-kind-icon">idle</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#tickets" class="tsd-kind-icon">tickets</a>
+								<a href="_sapphire_event_iterator.eventiteratoroptions.html#limit" class="tsd-kind-icon">limit</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketlimit.html" class="tsd-kind-icon">Bucket<wbr>Limit</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_sapphire_event_iterator.html#eventiteratorfilter" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Filter</a>
 					</li>
 				</ul>
 			</nav>

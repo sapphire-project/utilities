@@ -15,6 +15,7 @@
 **Packages**
 
 [![npm](https://img.shields.io/npm/v/@sapphire/eslint-config?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/eslint-config)
+[![npm](https://img.shields.io/npm/v/@sapphire/event-iterator?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/event-iterator)
 [![npm](https://img.shields.io/npm/v/@sapphire/ratelimits?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/ratelimits)
 [![npm](https://img.shields.io/npm/v/@sapphire/snowflake?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/snowflake)
 [![npm](https://img.shields.io/npm/v/@sapphire/ts-config?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/ts-config)

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@sapphire/ratelimits | Sapphire Utilities</title>
+	<title>@sapphire/event-iterator | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					<a href="_sapphire_event_iterator.html">@sapphire/event-iterator</a>
 				</li>
 			</ul>
-			<h1>Module @sapphire/ratelimits</h1>
+			<h1>Module @sapphire/event-iterator</h1>
 		</div>
 	</div>
 </header>
@@ -66,16 +66,16 @@
 				<div class="tsd-comment tsd-typography">
 					<div align="center">
 						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire.png" alt="Sapphire Logo"></p>
-						<a href="#sapphireratelimits" id="sapphireratelimits" style="color: inherit; text-decoration: none;">
-							<h1>@sapphire/ratelimits</h1>
+						<a href="#sapphireevent-iterator" id="sapphireevent-iterator" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/event-iterator</h1>
 						</a>
-						<p><strong>Bucket implementation for Ratelimits.</strong></p>
+						<p><strong>Turns event emitter events into async iterators.</strong></p>
 						<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
 							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
 							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
 							<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
-							<a href="https://bundlephobia.com/result?p=@sapphire/ratelimits"><img src="https://img.shields.io/bundlephobia/min/@sapphire/ratelimits?logo=webpack&style=flat-square" alt="npm bundle size"></a>
-							<a href="https://www.npmjs.com/package/@sapphire/ratelimits"><img src="https://img.shields.io/npm/v/@sapphire/ratelimits?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/event-iterator"><img src="https://img.shields.io/bundlephobia/min/@sapphire/event-iterator?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/event-iterator"><img src="https://img.shields.io/npm/v/@sapphire/event-iterator?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
 						<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15202"><img src="https://badges.depfu.com/badges/34035e3cf4ced0737443671ebefa2f47/count.svg" alt="Depfu"></a></p>
 					</div>
 					<p><strong>Table of Contents</strong></p>
@@ -84,8 +84,7 @@
 						<li><a href="#features">Features</a></li>
 						<li><a href="#installation">Installation</a></li>
 						<li><a href="#usage">Usage</a><ul>
-								<li><a href="#token-bucket">Token Bucket</a></li>
-								<li><a href="#leaky-bucket">Leaky Bucket</a></li>
+								<li><a href="#basic-usage">Basic Usage</a></li>
 							</ul>
 						</li>
 						<li><a href="#api-documentation">API Documentation</a></li>
@@ -95,7 +94,7 @@
 					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 						<h2>Description</h2>
 					</a>
-					<p>There is often a need to apply ratelimits to protect a network from excessive traffic levels on connections routed through it. This package offers two different techniques in the same implementation: the simple <a href="https://en.wikipedia.org/wiki/Token_bucket">Token Bucket</a>, and the more complex <a href="https://en.wikipedia.org/wiki/Leaky_bucket">Leaky Bucket</a>.</p>
+					<p>There is often a need to have async iterators with fine control, timeouts, limits, filter, and so on, this package exists to satisfy those needs. By implementing an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator">async iterator</a> which can be used with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of"><code>for await...of</code></a> loops.</p>
 					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
 						<h2>Features</h2>
 					</a>
@@ -108,40 +107,37 @@
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
 					</a>
-					<pre><code class="language-sh">yarn add @sapphire/ratelimits
-<span class="hljs-comment"># npm install @sapphire/ratelimits</span></code></pre>
+					<pre><code class="language-sh">yarn add @sapphire/event-iterator
+<span class="hljs-comment"># npm install @sapphire/event-iterator</span></code></pre>
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h2>Usage</h2>
 					</a>
-					<p><strong>Note:</strong> While this section uses <code>require</code>, the imports match 1:1 with ESM imports. For example <code>const { Bucket } = require(&#39;@sapphire/ratelimits&#39;)</code> equals <code>import { Bucket } from &#39;@sapphire/ratelimits&#39;</code>.</p>
-					<a href="#token-bucket" id="token-bucket" style="color: inherit; text-decoration: none;">
-						<h3>Token Bucket</h3>
+					<p><strong>Note:</strong> While this section uses <code>require</code>, the imports match 1:1 with ESM imports. For example <code>const { EventIterator } = require(&#39;@sapphire/event-iterator&#39;)</code> equals <code>import { EventIterator } from &#39;@sapphire/event-iterator&#39;</code>.</p>
+					<a href="#basic-usage" id="basic-usage" style="color: inherit; text-decoration: none;">
+						<h3>Basic Usage</h3>
 					</a>
-					<pre><code class="language-ts"><span class="hljs-comment">// Import the Bucket class</span>
-<span class="hljs-keyword">const</span> { Bucket } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/ratelimits&#x27;</span>);
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the EventIterator class</span>
+<span class="hljs-keyword">const</span> { EventIterator } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/event-iterator&#x27;</span>);
 
-<span class="hljs-comment">// Define a bucket with 1 usage every 5 seconds</span>
-<span class="hljs-keyword">const</span> bucket = <span class="hljs-keyword">new</span> Bucket().setDelay(<span class="hljs-number">5000</span>);
+<span class="hljs-comment">// Define an event iterator with a limit of 2 entries</span>
+<span class="hljs-keyword">const</span> iterator = <span class="hljs-keyword">new</span> EventIterator(emitter, <span class="hljs-string">&#x27;message&#x27;</span>, { limit: <span class="hljs-number">2</span> });
 
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span></code></pre>
-					<a href="#leaky-bucket" id="leaky-bucket" style="color: inherit; text-decoration: none;">
-						<h3>Leaky Bucket</h3>
-					</a>
-					<pre><code class="language-ts"><span class="hljs-comment">// Import the Bucket class</span>
-<span class="hljs-keyword">const</span> { Bucket } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/ratelimits&#x27;</span>);
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;foo&#x27;</span> });
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;bar&#x27;</span> });
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;baz&#x27;</span> });
 
-<span class="hljs-comment">// Define a bucket with 2 usages every 5 seconds</span>
-<span class="hljs-keyword">const</span> bucket = <span class="hljs-keyword">new</span> Bucket().setLimit({ timespan: <span class="hljs-number">5000</span>, maximum: <span class="hljs-number">2</span> });
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> message <span class="hljs-keyword">of</span> iterator) {
+    <span class="hljs-built_in">console</span>.log(message);
+    <span class="hljs-comment">// Logs: { id: &#x27;foo&#x27; }</span>
+    <span class="hljs-comment">// Logs: { id: &#x27;bar&#x27; }</span>
+}
 
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span></code></pre>
+<span class="hljs-comment">// The iterator ended at second item, { id: &#x27;baz&#x27; } is not collected due to the specified limit.</span></code></pre>
 					<hr>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
 					</a>
-					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_ratelimits.html">documentation</a>.</p>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_event-iterator.html">documentation</a>.</p>
 					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
 						<h2>Buy us some doughnuts</h2>
 					</a>
@@ -199,16 +195,66 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/_sapphire_ratelimits.bucket.html" class="tsd-kind-icon">Bucket</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/_sapphire_event_iterator.eventiterator.html" class="tsd-kind-icon">Event<wbr>Iterator</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_ratelimits.bucketentry.html" class="tsd-kind-icon">Bucket<wbr>Entry</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_ratelimits.bucketlimit.html" class="tsd-kind-icon">Bucket<wbr>Limit</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/_sapphire_event_iterator.eventiteratoroptions.html" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Options</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_event_iterator.html#eventiteratorfilter" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Filter</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="eventiteratorfilter" class="tsd-anchor"></a>
+					<h3>Event<wbr>Iterator<wbr>Filter</h3>
+					<div class="tsd-signature tsd-kind-icon">Event<wbr>Iterator<wbr>Filter&lt;V&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8c80a76/packages/event-iterator/src/index.ts#L7">event-iterator/src/index.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A filter for an EventIterator.</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>V</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>value: <span class="tsd-signature-type">V</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -225,10 +271,10 @@
 					<li class=" tsd-kind-module">
 						<a href="_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_sapphire_ratelimits.html">@sapphire/ratelimits</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -242,13 +288,13 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/_sapphire_ratelimits.bucket.html" class="tsd-kind-icon">Bucket</a>
+						<a href="../classes/_sapphire_event_iterator.eventiterator.html" class="tsd-kind-icon">Event<wbr>Iterator</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_sapphire_ratelimits.bucketentry.html" class="tsd-kind-icon">Bucket<wbr>Entry</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../interfaces/_sapphire_event_iterator.eventiteratoroptions.html" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_sapphire_ratelimits.bucketlimit.html" class="tsd-kind-icon">Bucket<wbr>Limit</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_sapphire_event_iterator.html#eventiteratorfilter" class="tsd-kind-icon">Event<wbr>Iterator<wbr>Filter</a>
 					</li>
 				</ul>
 			</nav>
