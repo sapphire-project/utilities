@@ -80,16 +80,16 @@
 					</div>
 					<p><strong>Table of Contents</strong></p>
 					<ul>
-						<li><a href="#description">Description</a></li>
-						<li><a href="#features">Features</a></li>
-						<li><a href="#installation">Installation</a></li>
+						<li>  <a href="#description">Description</a></li>
+						<li>  <a href="#features">Features</a></li>
+						<li>  <a href="#installation">Installation</a></li>
 						<li><a href="#usage">Usage</a><ul>
-								<li><a href="#basic-usage">Basic Usage</a></li>
+								<li>  <a href="#basic-usage">Basic Usage</a></li>
 							</ul>
 						</li>
-						<li><a href="#api-documentation">API Documentation</a></li>
-						<li><a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
-						<li><a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
+						<li>  <a href="#api-documentation">API Documentation</a></li>
+						<li>  <a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
+						<li>  <a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
 					</ul>
 					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 						<h2>Description</h2>
@@ -99,10 +99,10 @@
 						<h2>Features</h2>
 					</a>
 					<ul>
-						<li>Written in TypeScript</li>
-						<li>Bundled with Rollup so it can be used in NodeJS and browsers</li>
-						<li>Offers CommonJS, ESM and UMD bundles</li>
-						<li>Fully tested</li>
+						<li>  Written in TypeScript</li>
+						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
+						<li>  Offers CommonJS, ESM and UMD bundles</li>
+						<li>  Fully tested</li>
 					</ul>
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
@@ -120,11 +120,11 @@
 <span class="hljs-keyword">const</span> { EventIterator } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/event-iterator&#x27;</span>);
 
 <span class="hljs-comment">// Define an event iterator with a limit of 2 entries</span>
-<span class="hljs-keyword">const</span> iterator = <span class="hljs-keyword">new</span> EventIterator(emitter, <span class="hljs-string">&#x27;message&#x27;</span>, { limit: <span class="hljs-number">2</span> });
+<span class="hljs-keyword">const</span> iterator = <span class="hljs-keyword">new</span> EventIterator(emitter, <span class="hljs-string">&#x27;message&#x27;</span>, { <span class="hljs-attr">limit</span>: <span class="hljs-number">2</span> });
 
-emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;foo&#x27;</span> });
-emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;bar&#x27;</span> });
-emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span class="hljs-string">&#x27;baz&#x27;</span> });
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;foo&#x27;</span> });
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;bar&#x27;</span> });
+emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;baz&#x27;</span> });
 
 <span class="hljs-keyword">for</span> <span class="hljs-keyword">await</span> (<span class="hljs-keyword">const</span> message <span class="hljs-keyword">of</span> iterator) {
     <span class="hljs-built_in">console</span>.log(message);
@@ -221,7 +221,7 @@ emitter.emit(<span class="hljs-string">&#x27;message&#x27;</span>, { id: <span c
 					<div class="tsd-signature tsd-kind-icon">Event<wbr>Iterator<wbr>Filter&lt;V&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/96aa2c3/packages/event-iterator/src/index.ts#L7">event-iterator/src/index.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1d45d28/packages/event-iterator/src/index.ts#L7">event-iterator/src/index.ts:7</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
