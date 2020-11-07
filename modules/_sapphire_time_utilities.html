@@ -1,0 +1,623 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@sapphire/time-utilities | Sapphire Utilities</title>
+	<meta name="description" content="Documentation for Sapphire Utilities">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Sapphire Utilities</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_sapphire_time_utilities.html">@sapphire/time-utilities</a>
+				</li>
+			</ul>
+			<h1>Module @sapphire/time-utilities</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire.png" alt="Sapphire Logo"></p>
+						<a href="#sapphiretime-utilities" id="sapphiretime-utilities" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/time-utilities</h1>
+						</a>
+						<p><strong>Time utilities for JavaScript.</strong></p>
+						<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
+							<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/time-utilities"><img src="https://img.shields.io/bundlephobia/min/@sapphire/time-utilities?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/time-utilities"><img src="https://img.shields.io/npm/v/@sapphire/time-utilities?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+						<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
+					</div>
+					<p><strong>Table of Contents</strong></p>
+					<ul>
+						<li>  <a href="#description">Description</a></li>
+						<li>  <a href="#features">Features</a></li>
+						<li>  <a href="#installation">Installation</a></li>
+						<li><a href="#usage">Usage</a><ul>
+								<li>  <a href="#basic-usage">Basic Usage</a></li>
+							</ul>
+						</li>
+						<li>  <a href="#api-documentation">API Documentation</a></li>
+						<li>  <a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
+						<li>  <a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
+					</ul>
+					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+						<h2>Description</h2>
+					</a>
+					<p>Working with Time and Duration can be a huge chore in any programming language. There are various time parsing libraries on the NPM registry but we are of the opinion that none of them meet the code quality that we desire to use. For this reason we have decided to make this package.</p>
+					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+						<h2>Features</h2>
+					</a>
+					<ul>
+						<li>  Written in TypeScript</li>
+						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
+						<li>  Offers CommonJS, ESM and UMD bundles</li>
+						<li>  Fully tested</li>
+					</ul>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h2>Installation</h2>
+					</a>
+					<pre><code class="language-sh">yarn add @sapphire/time-utilities
+<span class="hljs-comment"># npm install @sapphire/time-utilities</span></code></pre>
+					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+						<h2>API Documentation</h2>
+					</a>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_time-utilities.html">documentation</a>.</p>
+					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
+						<h2>Buy us some doughnuts</h2>
+					</a>
+					<p>Sapphire Project is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
+					<p>We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
+					<table>
+						<thead>
+							<tr>
+								<th align="center">Donate With</th>
+								<th align="center">Address</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="center">Open Collective</td>
+								<td align="center"><a href="https://opencollective.com/sapphire-project">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Ko-fi</td>
+								<td align="center"><a href="https://ko-fi.com/sapphireproject">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Patreon</td>
+								<td align="center"><a href="https://www.patreon.com/sapphire_project">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">PayPal</td>
+								<td align="center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=SP738BQTQQYZY">Click Here</a></td>
+							</tr>
+					</tbody></table>
+					<a href="#contributors-✨" id="contributors-✨" style="color: inherit; text-decoration: none;">
+						<h2>Contributors ✨</h2>
+					</a>
+					<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+					<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+					<!-- prettier-ignore-start -->
+					<!-- markdownlint-disable -->
+					<table>
+						<tr>
+							<td align="center"><a href="https://favware.tech/"><img src="https://avatars3.githubusercontent.com/u/4019718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Claassens</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Code">💻</a> <a href="#infra-Favna" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-Favna" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Documentation">📖</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/kyranet"><img src="https://avatars0.githubusercontent.com/u/24852502?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Román</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Code">💻</a> <a href="#projectManagement-kyranet" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Akyranet" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/PyroTechniac"><img src="https://avatars2.githubusercontent.com/u/39341355?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gryffon Bellish</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3APyroTechniac" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/vladfrangu"><img src="https://avatars3.githubusercontent.com/u/17960496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Frangu</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/issues?q=author%3Avladfrangu" title="Bug reports">🐛</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Avladfrangu" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-vladfrangu" title="User Testing">📓</a> <a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/Soumil07"><img src="https://avatars0.githubusercontent.com/u/29275227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumil07</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Soumil07" title="Code">💻</a> <a href="#projectManagement-Soumil07" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Soumil07" title="Tests">⚠️</a></td>
+						</tr>
+					</table>
+					<!-- markdownlint-restore -->
+					<!-- prettier-ignore-end -->
+					<!-- ALL-CONTRIBUTORS-LIST:END -->
+					<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>References</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#cron" class="tsd-kind-icon">Cron</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#duration" class="tsd-kind-icon">Duration</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#durationformatassetstime" class="tsd-kind-icon">Duration<wbr>Format<wbr>Assets<wbr>Time</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#durationformatter" class="tsd-kind-icon">Duration<wbr>Formatter</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#time" class="tsd-kind-icon">Time</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#timeresolvable" class="tsd-kind-icon">Time<wbr>Resolvable</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#timetypes" class="tsd-kind-icon">Time<wbr>Types</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#timestamp" class="tsd-kind-icon">Timestamp</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#timestamptemplateentry" class="tsd-kind-icon">Timestamp<wbr>Template<wbr>Entry</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_sapphire_time_utilities.time-1.html" class="tsd-kind-icon">Time</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_sapphire_time_utilities.timetypes-1.html" class="tsd-kind-icon">Time<wbr>Types</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_time_utilities.cron-1.html" class="tsd-kind-icon">Cron</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_time_utilities.duration-1.html" class="tsd-kind-icon">Duration</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_time_utilities.durationformatter-1.html" class="tsd-kind-icon">Duration<wbr>Formatter</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_time_utilities.timestamp-1.html" class="tsd-kind-icon">Timestamp</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_time_utilities.durationformatassetstime-1.html" class="tsd-kind-icon">Duration<wbr>Format<wbr>Assets<wbr>Time</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_time_utilities.timestamptemplateentry-1.html" class="tsd-kind-icon">Timestamp<wbr>Template<wbr>Entry</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#timeresolvable-1" class="tsd-kind-icon">Time<wbr>Resolvable</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#allowednum" class="tsd-kind-icon">allowed<wbr>Num</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#crontokens" class="tsd-kind-icon">cron<wbr>Tokens</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#days" class="tsd-kind-icon">days</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#months" class="tsd-kind-icon">months</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#partregex" class="tsd-kind-icon">part<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#predefined" class="tsd-kind-icon">predefined</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#tokens" class="tsd-kind-icon">tokens</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#tokensregex" class="tsd-kind-icon">tokens<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_time_utilities.html#wildcardregex" class="tsd-kind-icon">wildcard<wbr>Regex</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>References</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="cron" class="tsd-anchor"></a>
+					<h3>Cron</h3>
+					Re-exports <a href="../classes/_sapphire_time_utilities.cron-1.html">Cron</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="duration" class="tsd-anchor"></a>
+					<h3>Duration</h3>
+					Re-exports <a href="../classes/_sapphire_time_utilities.duration-1.html">Duration</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="durationformatassetstime" class="tsd-anchor"></a>
+					<h3>Duration<wbr>Format<wbr>Assets<wbr>Time</h3>
+					Re-exports <a href="../interfaces/_sapphire_time_utilities.durationformatassetstime-1.html">DurationFormatAssetsTime</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="durationformatter" class="tsd-anchor"></a>
+					<h3>Duration<wbr>Formatter</h3>
+					Re-exports <a href="../classes/_sapphire_time_utilities.durationformatter-1.html">DurationFormatter</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="time" class="tsd-anchor"></a>
+					<h3>Time</h3>
+					Re-exports <a href="../enums/_sapphire_time_utilities.time-1.html">Time</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="timeresolvable" class="tsd-anchor"></a>
+					<h3>Time<wbr>Resolvable</h3>
+					Re-exports <a href="_sapphire_time_utilities.html#timeresolvable-1">TimeResolvable</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="timetypes" class="tsd-anchor"></a>
+					<h3>Time<wbr>Types</h3>
+					Re-exports <a href="../enums/_sapphire_time_utilities.timetypes-1.html">TimeTypes</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="timestamp" class="tsd-anchor"></a>
+					<h3>Timestamp</h3>
+					Re-exports <a href="../classes/_sapphire_time_utilities.timestamp-1.html">Timestamp</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="timestamptemplateentry" class="tsd-anchor"></a>
+					<h3>Timestamp<wbr>Template<wbr>Entry</h3>
+					Re-exports <a href="../interfaces/_sapphire_time_utilities.timestamptemplateentry-1.html">TimestampTemplateEntry</a>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="timeresolvable-1" class="tsd-anchor"></a>
+					<h3>Time<wbr>Resolvable</h3>
+					<div class="tsd-signature tsd-kind-icon">Time<wbr>Resolvable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/Timestamp.ts#L115">time-utilities/src/lib/Timestamp.ts:115</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="allowednum" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> allowed<wbr>Num</h3>
+					<div class="tsd-signature tsd-kind-icon">allowed<wbr>Num<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [[0, 59],[0, 23],[1, 31],[1, 12],[0, 6]]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L41">time-utilities/src/lib/constants.ts:41</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="crontokens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> cron<wbr>Tokens</h3>
+					<div class="tsd-signature tsd-kind-icon">cron<wbr>Tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>apr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">4</span><span class="tsd-signature-symbol">; </span>aug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">8</span><span class="tsd-signature-symbol">; </span>dec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">12</span><span class="tsd-signature-symbol">; </span>feb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">2</span><span class="tsd-signature-symbol">; </span>fri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">5</span><span class="tsd-signature-symbol">; </span>jan<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">; </span>jul<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">7</span><span class="tsd-signature-symbol">; </span>jun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">6</span><span class="tsd-signature-symbol">; </span>mar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">3</span><span class="tsd-signature-symbol">; </span>may<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">5</span><span class="tsd-signature-symbol">; </span>mon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">; </span>nov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">11</span><span class="tsd-signature-symbol">; </span>oct<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">10</span><span class="tsd-signature-symbol">; </span>sat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">6</span><span class="tsd-signature-symbol">; </span>sep<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">9</span><span class="tsd-signature-symbol">; </span>sun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">0</span><span class="tsd-signature-symbol">; </span>thu<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">4</span><span class="tsd-signature-symbol">; </span>tue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">2</span><span class="tsd-signature-symbol">; </span>wed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">3</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {jan: 1,feb: 2,mar: 3,apr: 4,may: 5,jun: 6,jul: 7,aug: 8,sep: 9,oct: 10,nov: 11,dec: 12,sun: 0,mon: 1,tue: 2,wed: 3,thu: 4,fri: 5,sat: 6} as const</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L58">time-utilities/src/lib/constants.ts:58</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>apr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">4</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>aug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">8</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>dec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">12</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>feb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">2</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>fri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">5</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>jan<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">1</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>jul<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">7</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>jun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">6</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>mar<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">3</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>may<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">5</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>mon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">1</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>nov<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">11</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>oct<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">10</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>sat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">6</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>sep<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">9</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>sun<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">0</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>thu<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">4</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>tue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">2</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>wed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">3</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="days" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> days</h3>
+					<div class="tsd-signature tsd-kind-icon">days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;Sunday&#x27;, &#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;, &#x27;Saturday&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L11">time-utilities/src/lib/constants.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="months" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> months</h3>
+					<div class="tsd-signature tsd-kind-icon">months<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L13">time-utilities/src/lib/constants.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="partregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> part<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">part<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:(\*)|(\d+)(?:-(\d+))?)(?:\/(\d+))?$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L37">time-utilities/src/lib/constants.ts:37</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="predefined" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> predefined</h3>
+					<div class="tsd-signature tsd-kind-icon">predefined<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>@annually<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 1 *"</span><span class="tsd-signature-symbol">; </span>@daily<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 * * *"</span><span class="tsd-signature-symbol">; </span>@hourly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 * * * *"</span><span class="tsd-signature-symbol">; </span>@monthly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 * *"</span><span class="tsd-signature-symbol">; </span>@weekly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 * * 0"</span><span class="tsd-signature-symbol">; </span>@yearly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 1 *"</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {&#x27;@annually&#x27;: &#x27;0 0 1 1 *&#x27;,&#x27;@yearly&#x27;: &#x27;0 0 1 1 *&#x27;,&#x27;@monthly&#x27;: &#x27;0 0 1 * *&#x27;,&#x27;@weekly&#x27;: &#x27;0 0 * * 0&#x27;,&#x27;@daily&#x27;: &#x27;0 0 * * *&#x27;,&#x27;@hourly&#x27;: &#x27;0 * * * *&#x27;} as const</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L49">time-utilities/src/lib/constants.ts:49</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>@annually<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 1 *"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>@daily<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 * * *"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>@hourly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 * * * *"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>@monthly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 * *"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>@weekly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 * * 0"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>@yearly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"0 0 1 1 *"</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="tokens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> tokens</h3>
+					<div class="tsd-signature tsd-kind-icon">tokens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map&lt;string, number&gt;([[&#x27;Y&#x27;, 4],[&#x27;Q&#x27;, 1],[&#x27;M&#x27;, 4],[&#x27;D&#x27;, 4],[&#x27;d&#x27;, 4],[&#x27;X&#x27;, 1],[&#x27;x&#x27;, 1],[&#x27;H&#x27;, 2],[&#x27;h&#x27;, 2],[&#x27;a&#x27;, 1],[&#x27;A&#x27;, 1],[&#x27;m&#x27;, 2],[&#x27;s&#x27;, 2],[&#x27;S&#x27;, 3],[&#x27;Z&#x27;, 2],[&#x27;l&#x27;, 4],[&#x27;L&#x27;, 4],[&#x27;T&#x27;, 1],[&#x27;t&#x27;, 1]])</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L15">time-utilities/src/lib/constants.ts:15</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="tokensregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> tokens<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">tokens<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = new RegExp(Object.keys(cronTokens).join(&#x27;|&#x27;), &#x27;g&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L80">time-utilities/src/lib/constants.ts:80</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="wildcardregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> wildcard<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">wildcard<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /\bh\b|\B\?\B/g</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/27d5cab/packages/time-utilities/src/lib/constants.ts#L39">time-utilities/src/lib/constants.ts:39</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_decorators.html">@sapphire/decorators</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_snowflake.html">@sapphire/snowflake</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_sapphire_time_utilities.html">@sapphire/time-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_type.html">@sapphire/type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_utilities.html">@sapphire/utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#cron" class="tsd-kind-icon">Cron</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#duration" class="tsd-kind-icon">Duration</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#durationformatassetstime" class="tsd-kind-icon">Duration<wbr>Format<wbr>Assets<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#durationformatter" class="tsd-kind-icon">Duration<wbr>Formatter</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#time" class="tsd-kind-icon">Time</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#timeresolvable" class="tsd-kind-icon">Time<wbr>Resolvable</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#timetypes" class="tsd-kind-icon">Time<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#timestamp" class="tsd-kind-icon">Timestamp</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#timestamptemplateentry" class="tsd-kind-icon">Timestamp<wbr>Template<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_sapphire_time_utilities.time-1.html" class="tsd-kind-icon">Time</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_sapphire_time_utilities.timetypes-1.html" class="tsd-kind-icon">Time<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_time_utilities.cron-1.html" class="tsd-kind-icon">Cron</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_time_utilities.duration-1.html" class="tsd-kind-icon">Duration</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_time_utilities.durationformatter-1.html" class="tsd-kind-icon">Duration<wbr>Formatter</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_time_utilities.timestamp-1.html" class="tsd-kind-icon">Timestamp</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_time_utilities.durationformatassetstime-1.html" class="tsd-kind-icon">Duration<wbr>Format<wbr>Assets<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_time_utilities.timestamptemplateentry-1.html" class="tsd-kind-icon">Timestamp<wbr>Template<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#timeresolvable-1" class="tsd-kind-icon">Time<wbr>Resolvable</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#allowednum" class="tsd-kind-icon">allowed<wbr>Num</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#crontokens" class="tsd-kind-icon">cron<wbr>Tokens</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#days" class="tsd-kind-icon">days</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#months" class="tsd-kind-icon">months</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#partregex" class="tsd-kind-icon">part<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#predefined" class="tsd-kind-icon">predefined</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#tokens" class="tsd-kind-icon">tokens</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#tokensregex" class="tsd-kind-icon">tokens<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_time_utilities.html#wildcardregex" class="tsd-kind-icon">wildcard<wbr>Regex</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
