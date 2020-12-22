@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BucketLimit | Sapphire Utilities</title>
+	<title>DebounceSettings | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
 				</li>
 				<li>
-					<a href="_sapphire_ratelimits.bucketlimit.html">BucketLimit</a>
+					<a href="_sapphire_utilities.debouncesettings.html">DebounceSettings</a>
 				</li>
 			</ul>
-			<h1>Interface BucketLimit</h1>
+			<h1>Interface DebounceSettings</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,12 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The bucket limits.</p>
+						<p>lodash (Custom Build) <a href="https://lodash.com/">https://lodash.com/</a>
+							Build: <code>lodash modularize exports=&quot;npm&quot; -o ./</code>
+							Copyright jQuery Foundation and other contributors <a href="https://jquery.org/">https://jquery.org/</a>
+							Released under MIT license <a href="https://lodash.com/license">https://lodash.com/license</a>
+							Based on Underscore.js 1.8.3 <a href="http://underscorejs.org/LICENSE">http://underscorejs.org/LICENSE</a>
+						Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters &amp; Editors</p>
 					</div>
 				</div>
 			</section>
@@ -76,7 +81,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BucketLimit</span>
+						<span class="target">DebounceSettings</span>
 					</li>
 				</ul>
 			</section>
@@ -87,8 +92,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketlimit.html#maximum" class="tsd-kind-icon">maximum</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketlimit.html#timespan" class="tsd-kind-icon">timespan</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_utilities.debouncesettings.html#maxwait" class="tsd-kind-icon">max<wbr>Wait</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_utilities.debouncesettings.html#wait" class="tsd-kind-icon">wait</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,42 +102,43 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="maximum" class="tsd-anchor"></a>
-					<h3>maximum</h3>
-					<div class="tsd-signature tsd-kind-icon">maximum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="maxwait" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> max<wbr>Wait</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Wait<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/ratelimits/src/lib/Bucket.ts#L39">ratelimits/src/lib/Bucket.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/debounce/index.ts#L22">utilities/src/lib/debounce/index.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The maximum amount of tickets.</p>
+							<p>The maximum time <code>func</code> is allowed to be delayed before it&#39;s invoked</p>
 						</div>
-						<p>This limits the amount of requests that can be made within the
-						<a href="../classes/_sapphire_ratelimits.bucket.html">Bucket</a>&#39;s {@link Bucket#delay delay}.</p>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>null</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="timespan" class="tsd-anchor"></a>
-					<h3>timespan</h3>
-					<div class="tsd-signature tsd-kind-icon">timespan<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="wait" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> wait</h3>
+					<div class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/ratelimits/src/lib/Bucket.ts#L31">ratelimits/src/lib/Bucket.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/debounce/index.ts#L16">utilities/src/lib/debounce/index.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The time between tickets.</p>
+							<p>The number of milliseconds to delay.</p>
 						</div>
-						<p>If timespan is zero, there will be no spacing between usages, this means
-							that a 5/5s bucket ({@link BucketLimit#limit limit} of 5 in 5 seconds
-							{@link Bucket#delay delay}) will accept 5 requests, then will wait for
-						the remaining time.</p>
-						<p>However, if in the previous example, this is set to 1 second, this will
-							then space the requests evenly to 1 request per second until the bucket
-						is consumed.</p>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>0</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -158,7 +164,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_prettier_config.html">@sapphire/prettier-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -176,29 +182,23 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_type.html">@sapphire/type</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/_sapphire_ratelimits.bucket.html" class="tsd-kind-icon">Bucket</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketentry.html" class="tsd-kind-icon">Bucket<wbr>Entry</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketlimit.html" class="tsd-kind-icon">Bucket<wbr>Limit</a>
+						<a href="_sapphire_utilities.debouncesettings.html" class="tsd-kind-icon">Debounce<wbr>Settings</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketlimit.html#maximum" class="tsd-kind-icon">maximum</a>
+								<a href="_sapphire_utilities.debouncesettings.html#maxwait" class="tsd-kind-icon">max<wbr>Wait</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketlimit.html#timespan" class="tsd-kind-icon">timespan</a>
+								<a href="_sapphire_utilities.debouncesettings.html#wait" class="tsd-kind-icon">wait</a>
 							</li>
 						</ul>
 					</li>

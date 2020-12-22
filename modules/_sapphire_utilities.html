@@ -158,6 +158,8 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_utilities.debouncesettings.html" class="tsd-kind-icon">Debounce<wbr>Settings</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter"><a href="../interfaces/_sapphire_utilities.debouncedfunc.html" class="tsd-kind-icon">Debounced<wbr>Func</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_utilities.thenable.html" class="tsd-kind-icon">Thenable</a></li>
 							</ul>
 						</section>
@@ -187,6 +189,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_utilities.html#classextends" class="tsd-kind-icon">class<wbr>Extends</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_utilities.html#codeblock" class="tsd-kind-icon">code<wbr>Block</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_utilities.html#cuttext" class="tsd-kind-icon">cut<wbr>Text</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_utilities.html#debounce" class="tsd-kind-icon">debounce</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_utilities.html#deepclone" class="tsd-kind-icon">deep<wbr>Clone</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_utilities.html#inlinecodeblock" class="tsd-kind-icon">inline<wbr>Code<wbr>Block</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_utilities.html#isclass" class="tsd-kind-icon">is<wbr>Class</a></li>
@@ -221,7 +224,7 @@
 					<div class="tsd-signature tsd-kind-icon">Argument<wbr>Types&lt;F&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">F</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> A<span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">never</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L38">utilities/src/lib/utilityTypes.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L38">utilities/src/lib/utilityTypes.ts:38</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -237,7 +240,7 @@
 					<div class="tsd-signature tsd-kind-icon">Arr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L44">utilities/src/lib/utilityTypes.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L44">utilities/src/lib/utilityTypes.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,7 +255,7 @@
 					<div class="tsd-signature tsd-kind-icon">Awaited&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L69">utilities/src/lib/utilityTypes.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L69">utilities/src/lib/utilityTypes.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -273,7 +276,7 @@
 					<div class="tsd-signature tsd-kind-icon">Builtin<span class="tsd-signature-symbol">:</span> <a href="_sapphire_utilities.html#primitive" class="tsd-signature-type">Primitive</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L4">utilities/src/lib/utilityTypes.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L4">utilities/src/lib/utilityTypes.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -283,7 +286,7 @@
 					<div class="tsd-signature tsd-kind-icon">Constructor&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L54">utilities/src/lib/utilityTypes.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L54">utilities/src/lib/utilityTypes.ts:54</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -309,7 +312,7 @@
 					<div class="tsd-signature tsd-kind-icon">Ctor&lt;A, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L49">utilities/src/lib/utilityTypes.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L49">utilities/src/lib/utilityTypes.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -338,7 +341,7 @@
 					<div class="tsd-signature tsd-kind-icon">Deep<wbr>Partial&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L30">utilities/src/lib/utilityTypes.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L30">utilities/src/lib/utilityTypes.ts:30</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -359,7 +362,7 @@
 					<div class="tsd-signature tsd-kind-icon">Deep<wbr>Required&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Builtin</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">NonNullable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> K<span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">infer </span> V<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ReadonlyMap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> K<span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">infer </span> V<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">ReadonlyMap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">WeakMap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> K<span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">infer </span> V<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">WeakMap</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> U<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">ReadonlySet</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> U<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">ReadonlySet</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">WeakSet</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> U<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">WeakSet</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">infer </span> U<span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">DeepRequired</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">NonNullable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L6">utilities/src/lib/utilityTypes.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L6">utilities/src/lib/utilityTypes.ts:6</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -375,7 +378,7 @@
 					<div class="tsd-signature tsd-kind-icon">First<wbr>Argument&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span>arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> U, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">unknown</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L59">utilities/src/lib/utilityTypes.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L59">utilities/src/lib/utilityTypes.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -396,7 +399,7 @@
 					<div class="tsd-signature tsd-kind-icon">Partial<wbr>Required&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L28">utilities/src/lib/utilityTypes.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L28">utilities/src/lib/utilityTypes.ts:28</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -415,7 +418,7 @@
 					<div class="tsd-signature tsd-kind-icon">Primitive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L2">utilities/src/lib/utilityTypes.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L2">utilities/src/lib/utilityTypes.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -425,7 +428,7 @@
 					<div class="tsd-signature tsd-kind-icon">Required<wbr>Except&lt;T, K&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L26">utilities/src/lib/utilityTypes.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L26">utilities/src/lib/utilityTypes.ts:26</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -444,7 +447,7 @@
 					<div class="tsd-signature tsd-kind-icon">Second<wbr>Argument&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">(</span>arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">infer </span> U, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol"> ? </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">unknown</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/utilityTypes.ts#L64">utilities/src/lib/utilityTypes.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/utilityTypes.ts#L64">utilities/src/lib/utilityTypes.ts:64</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -472,7 +475,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/arrayStrictEquals.ts#L6">utilities/src/lib/arrayStrictEquals.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/arrayStrictEquals.ts#L6">utilities/src/lib/arrayStrictEquals.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -515,7 +518,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/chunk.ts#L6">utilities/src/lib/chunk.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/chunk.ts#L6">utilities/src/lib/chunk.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -558,7 +561,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/classExtends.ts#L8">utilities/src/lib/classExtends.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/classExtends.ts#L8">utilities/src/lib/classExtends.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -601,7 +604,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/codeBlock.ts#L8">utilities/src/lib/codeBlock.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/codeBlock.ts#L8">utilities/src/lib/codeBlock.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -644,7 +647,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/cutText.ts#L10">utilities/src/lib/cutText.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/cutText.ts#L10">utilities/src/lib/cutText.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -680,6 +683,78 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="debounce" class="tsd-anchor"></a>
+					<h3>debounce</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">debounce&lt;FnArgumentsType, FnReturnType&gt;<span class="tsd-signature-symbol">(</span>func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">FnReturnType</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_sapphire_utilities.debouncesettings.html" class="tsd-signature-type">DebounceSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_sapphire_utilities.debouncedfunc.html" class="tsd-signature-type">DebouncedFunc</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/debounce/index.ts#L69">utilities/src/lib/debounce/index.ts:69</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a debounced function that delays invoking func until after wait milliseconds have elapsed since
+										the last time the debounced function was invoked. The debounced function comes with a cancel method to
+										cancel delayed invocations and a flush method to immediately invoke them. Provide an options object to
+										indicate that func should be invoked on the leading and/or trailing edge of the wait timeout. Subsequent
+									calls to the debounced function return the result of the last func invocation.</p>
+								</div>
+								<p>Note: If leading and trailing options are true, func is invoked on the trailing edge of the timeout only
+								if the the debounced function is invoked more than once during the wait timeout.</p>
+								<p>See David Corbacho’s article for details over the differences between _.debounce and _.throttle.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>FnArgumentsType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>FnReturnType</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>func: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">FnReturnType</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function to debounce.</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnReturnType</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">FnArgumentsType</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FnReturnType</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_sapphire_utilities.debouncesettings.html" class="tsd-signature-type">DebounceSettings</a><span class="tsd-signature-symbol"> = {}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The options object.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_sapphire_utilities.debouncedfunc.html" class="tsd-signature-type">DebouncedFunc</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Returns the new debounced function.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 					<a name="deepclone" class="tsd-anchor"></a>
 					<h3>deep<wbr>Clone</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
@@ -689,7 +764,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/deepClone.ts#L8">utilities/src/lib/deepClone.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/deepClone.ts#L8">utilities/src/lib/deepClone.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -726,7 +801,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/inlineCodeBlock.ts#L7">utilities/src/lib/inlineCodeBlock.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/inlineCodeBlock.ts#L7">utilities/src/lib/inlineCodeBlock.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -754,7 +829,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isClass.ts#L7">utilities/src/lib/isClass.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isClass.ts#L7">utilities/src/lib/isClass.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -785,7 +860,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isFunction.ts#L6">utilities/src/lib/isFunction.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isFunction.ts#L6">utilities/src/lib/isFunction.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -816,7 +891,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isNullOrUndefined.ts#L5">utilities/src/lib/isNullOrUndefined.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isNullOrUndefined.ts#L5">utilities/src/lib/isNullOrUndefined.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -847,7 +922,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isNumber.ts#L5">utilities/src/lib/isNumber.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isNumber.ts#L5">utilities/src/lib/isNumber.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -878,7 +953,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isObject.ts#L6">utilities/src/lib/isObject.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isObject.ts#L6">utilities/src/lib/isObject.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -909,7 +984,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isPrimitive.ts#L7">utilities/src/lib/isPrimitive.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isPrimitive.ts#L7">utilities/src/lib/isPrimitive.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -940,7 +1015,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/isThenable.ts#L21">utilities/src/lib/isThenable.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/isThenable.ts#L21">utilities/src/lib/isThenable.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -971,7 +1046,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/makeObject.ts#L7">utilities/src/lib/makeObject.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/makeObject.ts#L7">utilities/src/lib/makeObject.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1014,7 +1089,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/mergeDefault.ts#L46">utilities/src/lib/mergeDefault.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/mergeDefault.ts#L46">utilities/src/lib/mergeDefault.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1096,7 +1171,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/mergeObjects.ts#L9">utilities/src/lib/mergeObjects.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/mergeObjects.ts#L9">utilities/src/lib/mergeObjects.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1142,7 +1217,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/noop.ts#L2">utilities/src/lib/noop.ts:2</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/noop.ts#L2">utilities/src/lib/noop.ts:2</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1159,7 +1234,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/objectToTuples.ts#L8">utilities/src/lib/objectToTuples.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/objectToTuples.ts#L8">utilities/src/lib/objectToTuples.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1193,7 +1268,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/parseUrl.ts#L5">utilities/src/lib/parseUrl.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/parseUrl.ts#L5">utilities/src/lib/parseUrl.ts:5</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1224,7 +1299,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/range.ts#L7">utilities/src/lib/range.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/range.ts#L7">utilities/src/lib/range.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1267,7 +1342,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/regExpEsc.ts#L8">utilities/src/lib/regExpEsc.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/regExpEsc.ts#L8">utilities/src/lib/regExpEsc.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1298,7 +1373,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/roundNumber.ts#L7">utilities/src/lib/roundNumber.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/roundNumber.ts#L7">utilities/src/lib/roundNumber.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1336,7 +1411,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/splitText.ts#L9">utilities/src/lib/splitText.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/splitText.ts#L9">utilities/src/lib/splitText.ts:9</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1387,7 +1462,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/toTitleCase.ts#L26">utilities/src/lib/toTitleCase.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/toTitleCase.ts#L26">utilities/src/lib/toTitleCase.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1434,7 +1509,7 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1f91ede/packages/utilities/src/lib/tryParse.ts#L6">utilities/src/lib/tryParse.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/4762ebf/packages/utilities/src/lib/tryParse.ts#L6">utilities/src/lib/tryParse.ts:6</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1504,6 +1579,12 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_utilities.debouncesettings.html" class="tsd-kind-icon">Debounce<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../interfaces/_sapphire_utilities.debouncedfunc.html" class="tsd-kind-icon">Debounced<wbr>Func</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_sapphire_utilities.thenable.html" class="tsd-kind-icon">Thenable</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
@@ -1559,6 +1640,9 @@ mergeDefault(base, overwrites) <span class="hljs-comment">// { a: { b: 5 } };</s
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_sapphire_utilities.html#cuttext" class="tsd-kind-icon">cut<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_sapphire_utilities.html#debounce" class="tsd-kind-icon">debounce</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_sapphire_utilities.html#deepclone" class="tsd-kind-icon">deep<wbr>Clone</a>
