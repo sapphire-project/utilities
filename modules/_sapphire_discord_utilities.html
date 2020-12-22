@@ -1,0 +1,973 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@sapphire/discord-utilities | Sapphire Utilities</title>
+	<meta name="description" content="Documentation for Sapphire Utilities">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Sapphire Utilities</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_sapphire_discord_utilities.html">@sapphire/discord-utilities</a>
+				</li>
+			</ul>
+			<h1>Module @sapphire/discord-utilities</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire.png" alt="Sapphire Logo"></p>
+						<a href="#sapphirediscord-utilities" id="sapphirediscord-utilities" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/discord-utilities</h1>
+						</a>
+						<p><strong>Discord specific utilities for your JavaScript/TypeScript bots.</strong></p>
+						<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript"></a>
+							<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/discord-utilities"><img src="https://img.shields.io/bundlephobia/min/@sapphire/discord-utilities?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/discord-utilities"><img src="https://img.shields.io/npm/v/@sapphire/discord-utilities?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+						<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
+					</div>
+					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+						<h2>Description</h2>
+					</a>
+					<p>When developing Discord bots or frameworks for Discord bots we often run into certain constants such as regex&#39;s, channel type resolutions and other common functions that would be really nice to get from 1 centralized place. That&#39;s where @sapphire/discord-utilities come in. This package provides common Discord specific utilities for your Discord bots.</p>
+					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+						<h2>Features</h2>
+					</a>
+					<ul>
+						<li>  Written in TypeScript</li>
+						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
+						<li>  Offers CommonJS, ESM and UMD bundles</li>
+						<li>  Fully tested</li>
+					</ul>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h2>Installation</h2>
+					</a>
+					<pre><code class="language-sh">yarn add @sapphire/discord-utilities</code></pre>
+					<hr>
+					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+						<h2>API Documentation</h2>
+					</a>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_discord_utilities.html">documentation</a>.</p>
+					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
+						<h2>Buy us some doughnuts</h2>
+					</a>
+					<p>Sapphire Project is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
+					<p>We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
+					<table>
+						<thead>
+							<tr>
+								<th align="center">Donate With</th>
+								<th align="center">Address</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="center">Open Collective</td>
+								<td align="center"><a href="https://opencollective.com/sapphire-project">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Ko-fi</td>
+								<td align="center"><a href="https://ko-fi.com/sapphireproject">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Patreon</td>
+								<td align="center"><a href="https://www.patreon.com/sapphire_project">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">PayPal</td>
+								<td align="center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=SP738BQTQQYZY">Click Here</a></td>
+							</tr>
+					</tbody></table>
+					<a href="#contributors-✨" id="contributors-✨" style="color: inherit; text-decoration: none;">
+						<h2>Contributors ✨</h2>
+					</a>
+					<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+					<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+					<!-- prettier-ignore-start -->
+					<!-- markdownlint-disable -->
+					<table>
+						<tr>
+							<td align="center"><a href="https://favware.tech/"><img src="https://avatars3.githubusercontent.com/u/4019718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Claassens</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Code">💻</a> <a href="#infra-Favna" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-Favna" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Documentation">📖</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Favna" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/kyranet"><img src="https://avatars0.githubusercontent.com/u/24852502?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Román</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Code">💻</a> <a href="#projectManagement-kyranet" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Akyranet" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=kyranet" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/PyroTechniac"><img src="https://avatars2.githubusercontent.com/u/39341355?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gryffon Bellish</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3APyroTechniac" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-project/utilities/commits?author=PyroTechniac" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/vladfrangu"><img src="https://avatars3.githubusercontent.com/u/17960496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Frangu</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Code">💻</a> <a href="https://github.com/sapphire-project/utilities/issues?q=author%3Avladfrangu" title="Bug reports">🐛</a> <a href="https://github.com/sapphire-project/utilities/pulls?q=is%3Apr+reviewed-by%3Avladfrangu" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-vladfrangu" title="User Testing">📓</a> <a href="https://github.com/sapphire-project/utilities/commits?author=vladfrangu" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/Soumil07"><img src="https://avatars0.githubusercontent.com/u/29275227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumil07</b></sub></a><br /><a href="https://github.com/sapphire-project/utilities/commits?author=Soumil07" title="Code">💻</a> <a href="#projectManagement-Soumil07" title="Project Management">📆</a> <a href="https://github.com/sapphire-project/utilities/commits?author=Soumil07" title="Tests">⚠️</a></td>
+						</tr>
+					</table>
+					<!-- markdownlint-restore -->
+					<!-- prettier-ignore-end -->
+					<!-- ALL-CONTRIBUTORS-LIST:END -->
+					<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#channelmentionregex" class="tsd-kind-icon">Channel<wbr>Mention<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#discordhostnameregex" class="tsd-kind-icon">Discord<wbr>Hostname<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#discordinvitelinkregex" class="tsd-kind-icon">Discord<wbr>Invite<wbr>Link<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#emojiregex" class="tsd-kind-icon">Emoji<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#formattedcustomemoji" class="tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#formattedcustomemojiwithgroups" class="tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#httpurlregex" class="tsd-kind-icon">Http<wbr>Url<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#messagelinkregex" class="tsd-kind-icon">Message<wbr>Link<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#parsedcustomemoji" class="tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#parsedcustomemojiwithgroups" class="tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#rolementionregex" class="tsd-kind-icon">Role<wbr>Mention<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#snowflakeregex" class="tsd-kind-icon">Snowflake<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#twemojiregex" class="tsd-kind-icon">Twemoji<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#userormembermentionregex" class="tsd-kind-icon">User<wbr>OrMember<wbr>Mention<wbr>Regex</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#websocketurlregex" class="tsd-kind-icon">Web<wbr>Socket<wbr>Url<wbr>Regex</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#iscategorychannel" class="tsd-kind-icon">is<wbr>Category<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isdmchannel" class="tsd-kind-icon">isDMChannel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isgroupchannel" class="tsd-kind-icon">is<wbr>Group<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isguildbasedchannel" class="tsd-kind-icon">is<wbr>Guild<wbr>Based<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isnewschannel" class="tsd-kind-icon">is<wbr>News<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isstorechannel" class="tsd-kind-icon">is<wbr>Store<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#istextchannel" class="tsd-kind-icon">is<wbr>Text<wbr>Channel</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_discord_utilities.html#isvoicechannel" class="tsd-kind-icon">is<wbr>Voice<wbr>Channel</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="channelmentionregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Channel<wbr>Mention<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Channel<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;#(?&lt;id&gt;\d{17,19})&gt;?$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L8">discord-utilities/src/lib/regexes.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture the ID in Discord Channel mentions</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^&lt;#(?&lt;id&gt;\d{17,19})&gt;?$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the ID of the channel. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="discordhostnameregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Discord<wbr>Hostname<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Discord<wbr>Hostname<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(?&lt;subdomain&gt;\w+)\.?(?&lt;hostname&gt;dis(?:cord)?(?:app|merch|status)?)\.(?&lt;tld&gt;com|g(?:d|g|ift)|(?:de(?:sign|v))|media|new|store|net)/i</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L18">discord-utilities/src/lib/regexes.ts:18</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches links on the known Discord host names</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/(?&lt;prefix&gt;\w+\.)?(?&lt;hostname&gt;dis(?:cord)?(?:app|merch|status)?)\.(?&lt;tld&gt;com|g(?:d|g|ift)|(?:de(?:sign|v))|media|new|store|net)/i</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>The regex is case insensitive</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the subdomain for this URL. It is named <code>subdomain</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the hostname for this URL, primarily <code>discord</code> but can also be <code>discordmerch</code>, <code>discordstatus</code>, <code>dis</code>, and <code>discordapp</code>. It is named <code>hostname</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 3 is the Top-Level Domain <em>without</em> <code>.</code>. It is named <code>tld</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="discordinvitelinkregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Discord<wbr>Invite<wbr>Link<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Discord<wbr>Invite<wbr>Link<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:https?:\/\/)?(?:www\.)?(?:discord\.gg\/|discord(?:app)?\.com\/invite\/)?(?&lt;code&gt;[\w\d-]{2,})$/i</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L25">discord-utilities/src/lib/regexes.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can can capture the code of Discord invite links</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?:https?:\/\/)?(?:www\.)?(?:discord\.gg\/|discord(?:app)?\.com\/invite\/)?(?&lt;code&gt;[\w\d-]{2,})$/i</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the invite URL&#39;s unique code. It is named <code>code</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="emojiregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Emoji<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Emoji<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:&lt;(?&lt;animated&gt;a)?:(?&lt;name&gt;\w{2,32}):)?(?&lt;id&gt;\d{17,21})&gt;?$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L34">discord-utilities/src/lib/regexes.ts:34</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture the ID of any animated or non-animated custom Discord emoji</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?:&lt;(?&lt;animated&gt;a)?:(?&lt;name&gt;\w{2,32}):)?(?&lt;id&gt;\d{17,21})&gt;?$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 can be used to determine whether the emoji is animated or not. It is named <code>animated</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the name of the emoji as it is typed in a message. It is named <code>name</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the ID of the emoji. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="formattedcustomemoji" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Formatted<wbr>Custom<wbr>Emoji</h3>
+					<div class="tsd-signature tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /&lt;a?:\w{2,32}:\d{17,18}&gt;/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L41">discord-utilities/src/lib/regexes.ts:41</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches any animated or non-animated custom Discord emoji.
+							Unlike <a href="_sapphire_discord_utilities.html#emojiregex">EmojiRegex</a> It can be a substring of a larger string.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/&lt;a?:\w{2,32}:\d{17,18}&gt;/</code></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="formattedcustomemojiwithgroups" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Formatted<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</h3>
+					<div class="tsd-signature tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L51">discord-utilities/src/lib/regexes.ts:51</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture any animated or non-animated custom Discord emoji.
+							Similar to <a href="_sapphire_discord_utilities.html#formattedcustomemoji">FormattedCustomEmoji</a> and unlike <a href="_sapphire_discord_utilities.html#emojiregex">EmojiRegex</a> can also be a substring of a larger string.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 can be used to determine whether the emoji is animated or not. It is named <code>animated</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the name of the emoji as it is typed in a message. It is named <code>name</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the ID of the emoji. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="httpurlregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Http<wbr>Url<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Http<wbr>Url<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^https?:\/\//</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L58">discord-utilities/src/lib/regexes.ts:58</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches any URL starting with <code>http</code> or <code>https</code></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^https?:\/\//</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>for WebSocket URLs see [[WebsocketGenericUrlRegex]]</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="messagelinkregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Message<wbr>Link<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Message<wbr>Link<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:https:\/\/)?(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?&lt;guildId&gt;(?:\d{17,19}|@me))\/(?&lt;channelId&gt;\d{17,19})\/(?&lt;messageId&gt;\d{17,19})$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L67">discord-utilities/src/lib/regexes.ts:67</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture the Guild, Channel, and Message ID based on a shareable Discord message link.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?:https:\/\/)?(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?&lt;guildId&gt;(?:\d{17,19}|@me))\/(?&lt;channelId&gt;\d{17,19})\/(?&lt;messageId&gt;\d{17,19})$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the ID of the guild the message was sent in. It is named <code>guildId</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the ID of the channel in that guild the message was sent in. It is named <code>channelId</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 3 is the ID of the message itself. It is named <code>messageId</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="parsedcustomemoji" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Parsed<wbr>Custom<wbr>Emoji</h3>
+					<div class="tsd-signature tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /a?:\w{2,32}:\d{17,18}/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L75">discord-utilities/src/lib/regexes.ts:75</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches any animated or non-animated custom Discord emoji *without the wrapping <code>&lt;...&gt;</code> symbols.
+								This means that a string that matches this regex can directly be send inside a Discord message.
+							Other than this difference it is similar to <a href="_sapphire_discord_utilities.html#formattedcustomemoji">FormattedCustomEmoji</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/a?:\w{2,32}:\d{17,18}/</code></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="parsedcustomemojiwithgroups" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Parsed<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</h3>
+					<div class="tsd-signature tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L86">discord-utilities/src/lib/regexes.ts:86</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches any animated or non-animated custom Discord emoji *without the wrapping <code>&lt;...&gt;</code> symbols.
+								This means that a string that matches this regex can directly be send inside a Discord message.
+							Other than this difference it is similar to <a href="_sapphire_discord_utilities.html#formattedcustomemojiwithgroups">FormattedCustomEmojiWithGroups</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 can be used to determine whether the emoji is animated or not. It is named <code>animated</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the name of the emoji as it is typed in a message. It is named <code>name</code>.</p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 2 is the ID of the emoji. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="rolementionregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Role<wbr>Mention<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Role<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;@&amp;(?&lt;id&gt;\d{17,19})&gt;$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L93">discord-utilities/src/lib/regexes.ts:93</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture the ID in Discord Role mentions</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^&lt;@&amp;(?&lt;id&gt;\d{17,19})&gt;$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the ID of the role. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="snowflakeregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Snowflake<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Snowflake<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;id&gt;\d{17,19})$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L100">discord-utilities/src/lib/regexes.ts:100</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture any Discord Snowflake ID</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^(?&lt;id&gt;\d{17,19})$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the Snowflake. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="twemojiregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Twemoji<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Twemoji<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = twemojiRegex</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L106">discord-utilities/src/lib/regexes.ts:106</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture a Twemoji (Twitter Emoji)</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><a href="https://github.com/twitter/twemoji-parser/blob/master/src/lib/regex.js" class="external">See official source code</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="userormembermentionregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> User<wbr>OrMember<wbr>Mention<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">User<wbr>OrMember<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;@!?(?&lt;id&gt;\d{17,19})&gt;?$/</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L113">discord-utilities/src/lib/regexes.ts:113</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that can capture the ID of a user in Discord user mentions</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^&lt;@!?(?&lt;id&gt;\d{17,19})&gt;?$/</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>Capture group 1 is the ID of the user. It is named <code>id</code>.</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="websocketurlregex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Web<wbr>Socket<wbr>Url<wbr>Regex</h3>
+					<div class="tsd-signature tsd-kind-icon">Web<wbr>Socket<wbr>Url<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^wss?:\/\//</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/regexes.ts#L120">discord-utilities/src/lib/regexes.ts:120</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Regex that matches any WebSocket URL starting with <code>ws</code> or <code>wss</code></p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>raw</dt>
+							<dd><p><code>/^wss?:\/\//</code></p>
+							</dd>
+							<dt>remark</dt>
+							<dd><p>for regular HTTP URLs see <a href="_sapphire_discord_utilities.html#httpurlregex">HttpUrlRegex</a></p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="iscategorychannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Category<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Category<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">CategoryChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L7">discord-utilities/src/lib/type-guards.ts:7</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/CategoryChannel" class="external">CategoryChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">CategoryChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isdmchannel" class="tsd-anchor"></a>
+					<h3>isDMChannel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">isDMChannel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">DMChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L15">discord-utilities/src/lib/type-guards.ts:15</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/DMChannel" class="external">DMChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">DMChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isgroupchannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Group<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Group<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PartialGroupDMChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L23">discord-utilities/src/lib/type-guards.ts:23</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/PartialGroupDMChannel" class="external">PartialGroupDMChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PartialGroupDMChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isguildbasedchannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Guild<wbr>Based<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Guild<wbr>Based<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GuildChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L31">discord-utilities/src/lib/type-guards.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/GuildChannel" class="external">GuildChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">GuildChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isnewschannel" class="tsd-anchor"></a>
+					<h3>is<wbr>News<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>News<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">NewsChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L39">discord-utilities/src/lib/type-guards.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/NewsChannel" class="external">NewsChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">NewsChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isstorechannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Store<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Store<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">StoreChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L47">discord-utilities/src/lib/type-guards.ts:47</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/StoreChannel" class="external">StoreChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">StoreChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="istextchannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Text<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Text<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">StoreChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L55">discord-utilities/src/lib/type-guards.ts:55</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/TextChannel" class="external">TextChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">StoreChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isvoicechannel" class="tsd-anchor"></a>
+					<h3>is<wbr>Voice<wbr>Channel</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Voice<wbr>Channel<span class="tsd-signature-symbol">(</span>channel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Channel</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">VoiceChannel</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/fb3574a/packages/discord-utilities/src/lib/type-guards.ts#L63">discord-utilities/src/lib/type-guards.ts:63</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks whether a given channel is a <a href="https://discord.js.org/#/docs/main/stable/class/VoiceChannel" class="external">VoiceChannel</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>channel: <span class="tsd-signature-type">Channel</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The channel to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">channel</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">VoiceChannel</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_decorators.html">@sapphire/decorators</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_sapphire_discord_utilities.html">@sapphire/discord-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_snowflake.html">@sapphire/snowflake</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_stopwatch.html">@sapphire/stopwatch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_time_utilities.html">@sapphire/time-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_ts_config.html">@sapphire/ts-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_type.html">@sapphire/type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_utilities.html">@sapphire/utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#channelmentionregex" class="tsd-kind-icon">Channel<wbr>Mention<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#discordhostnameregex" class="tsd-kind-icon">Discord<wbr>Hostname<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#discordinvitelinkregex" class="tsd-kind-icon">Discord<wbr>Invite<wbr>Link<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#emojiregex" class="tsd-kind-icon">Emoji<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#formattedcustomemoji" class="tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#formattedcustomemojiwithgroups" class="tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#httpurlregex" class="tsd-kind-icon">Http<wbr>Url<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#messagelinkregex" class="tsd-kind-icon">Message<wbr>Link<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#parsedcustomemoji" class="tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#parsedcustomemojiwithgroups" class="tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#rolementionregex" class="tsd-kind-icon">Role<wbr>Mention<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#snowflakeregex" class="tsd-kind-icon">Snowflake<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#twemojiregex" class="tsd-kind-icon">Twemoji<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#userormembermentionregex" class="tsd-kind-icon">User<wbr>OrMember<wbr>Mention<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#websocketurlregex" class="tsd-kind-icon">Web<wbr>Socket<wbr>Url<wbr>Regex</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#iscategorychannel" class="tsd-kind-icon">is<wbr>Category<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isdmchannel" class="tsd-kind-icon">isDMChannel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isgroupchannel" class="tsd-kind-icon">is<wbr>Group<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isguildbasedchannel" class="tsd-kind-icon">is<wbr>Guild<wbr>Based<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isnewschannel" class="tsd-kind-icon">is<wbr>News<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isstorechannel" class="tsd-kind-icon">is<wbr>Store<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#istextchannel" class="tsd-kind-icon">is<wbr>Text<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_discord_utilities.html#isvoicechannel" class="tsd-kind-icon">is<wbr>Voice<wbr>Channel</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
