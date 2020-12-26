@@ -154,10 +154,18 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_decorators.functionfallback.html" class="tsd-kind-icon">Function<wbr>Fallback</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_sapphire_decorators.functionprecondition.html" class="tsd-kind-icon">Function<wbr>Precondition</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_decorators.html#applyoptions" class="tsd-kind-icon">Apply<wbr>Options</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_decorators.html#createclassdecorator" class="tsd-kind-icon">create<wbr>Class<wbr>Decorator</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_decorators.html#createfunctionprecondition" class="tsd-kind-icon">create<wbr>Function<wbr>Precondition</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_decorators.html#createmethoddecorator" class="tsd-kind-icon">create<wbr>Method<wbr>Decorator</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_decorators.html#enumerable" class="tsd-kind-icon">enumerable</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_sapphire_decorators.html#enumerablemethod" class="tsd-kind-icon">enumerable<wbr>Method</a></li>
@@ -178,12 +186,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/9fd2349/packages/decorators/src/core-decorators.ts#L18">decorators/src/core-decorators.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/core-decorators.ts#L18">decorators/src/core-decorators.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Decorator function that applies given options to any Klasa piece</p>
+									<p>Decorator function that applies given options to any Sapphire piece</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -221,7 +229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/9fd2349/packages/decorators/src/utils.ts#L23">decorators/src/utils.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/utils.ts#L43">decorators/src/utils.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -254,6 +262,65 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="createfunctionprecondition" class="tsd-anchor"></a>
+					<h3>create<wbr>Function<wbr>Precondition</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Function<wbr>Precondition<span class="tsd-signature-symbol">(</span>precondition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_sapphire_decorators.functionprecondition.html" class="tsd-signature-type">FunctionPrecondition</a>, fallback<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_sapphire_decorators.functionfallback.html" class="tsd-signature-type">FunctionFallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MethodDecorator</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/utils.ts#L73">decorators/src/utils.ts:73</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Utility to make function preconditions.</p>
+								</div>
+								<pre><code class="language-ts"><span class="hljs-comment">// No fallback (returns undefined)</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">requireGuild</span>(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>) </span>{
+  <span class="hljs-keyword">return</span> createFunctionPrecondition(<span class="hljs-function">(<span class="hljs-params">message: Message</span>) =&gt;</span>
+    message.guild !== <span class="hljs-literal">null</span>
+  );
+}
+
+<span class="hljs-comment">// With fallback</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">requireGuild</span>(<span class="hljs-params">
+  value: <span class="hljs-built_in">number</span>,
+  fallback: () =&gt; unknown = () =&gt; <span class="hljs-literal">undefined</span>
+</span>) </span>{
+  <span class="hljs-keyword">return</span> createFunctionPrecondition(
+    <span class="hljs-function">(<span class="hljs-params">message: Message</span>) =&gt;</span> message.guild !== <span class="hljs-literal">null</span>,
+    fallback
+  );
+}</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.0.0</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>precondition: <a href="../interfaces/_sapphire_decorators.functionprecondition.html" class="tsd-signature-type">FunctionPrecondition</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The function that defines whether or not the function should be run, returning the returned value from fallback</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fallback: <a href="../interfaces/_sapphire_decorators.functionfallback.html" class="tsd-signature-type">FunctionFallback</a><span class="tsd-signature-symbol"> = (): void &#x3D;&gt; undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The fallback value that defines what the method should return in case the precondition fails</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">MethodDecorator</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="createmethoddecorator" class="tsd-anchor"></a>
 					<h3>create<wbr>Method<wbr>Decorator</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
@@ -263,7 +330,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/9fd2349/packages/decorators/src/utils.ts#L14">decorators/src/utils.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/utils.ts#L34">decorators/src/utils.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -300,7 +367,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/9fd2349/packages/decorators/src/core-decorators.ts#L34">decorators/src/core-decorators.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/core-decorators.ts#L34">decorators/src/core-decorators.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -331,7 +398,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/9fd2349/packages/decorators/src/core-decorators.ts#L56">decorators/src/core-decorators.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/core-decorators.ts#L56">decorators/src/core-decorators.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -400,11 +467,20 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_decorators.functionfallback.html" class="tsd-kind-icon">Function<wbr>Fallback</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_sapphire_decorators.functionprecondition.html" class="tsd-kind-icon">Function<wbr>Precondition</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_sapphire_decorators.html#applyoptions" class="tsd-kind-icon">Apply<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="_sapphire_decorators.html#createclassdecorator" class="tsd-kind-icon">create<wbr>Class<wbr>Decorator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_sapphire_decorators.html#createfunctionprecondition" class="tsd-kind-icon">create<wbr>Function<wbr>Precondition</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_sapphire_decorators.html#createmethoddecorator" class="tsd-kind-icon">create<wbr>Method<wbr>Decorator</a>

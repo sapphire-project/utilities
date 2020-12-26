@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BucketEntry | Sapphire Utilities</title>
+	<title>FunctionPrecondition | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					<a href="../modules/_sapphire_decorators.html">@sapphire/decorators</a>
 				</li>
 				<li>
-					<a href="_sapphire_ratelimits.bucketentry.html">BucketEntry</a>
+					<a href="_sapphire_decorators.functionprecondition.html">FunctionPrecondition</a>
 				</li>
 			</ul>
-			<h1>Interface BucketEntry</h1>
+			<h1>Interface FunctionPrecondition</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An entry in the bucket.</p>
+						<p>The function precondition interface.</p>
 					</div>
 				</div>
 			</section>
@@ -76,57 +76,36 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">BucketEntry</span>
+						<span class="target">FunctionPrecondition</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#lasttime" class="tsd-kind-icon">last<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#settime" class="tsd-kind-icon">set<wbr>Time</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_ratelimits.bucketentry.html#tickets" class="tsd-kind-icon">tickets</a></li>
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-module">
+					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/decorators/src/utils.ts#L4">decorators/src/utils.ts:4</a></li>
 							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lasttime" class="tsd-anchor"></a>
-					<h3>last<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">last<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/ratelimits/src/lib/Bucket.ts#L10">ratelimits/src/lib/Bucket.ts:10</a></li>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The arguments passed to the function or class&#39; method.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
 						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="settime" class="tsd-anchor"></a>
-					<h3>set<wbr>Time</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/ratelimits/src/lib/Bucket.ts#L11">ratelimits/src/lib/Bucket.ts:11</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="tickets" class="tsd-anchor"></a>
-					<h3>tickets</h3>
-					<div class="tsd-signature tsd-kind-icon">tickets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/c87d5db/packages/ratelimits/src/lib/Bucket.ts#L12">ratelimits/src/lib/Bucket.ts:12</a></li>
-						</ul>
-					</aside>
-				</section>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -135,7 +114,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_decorators.html">@sapphire/decorators</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -150,7 +129,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_prettier_config.html">@sapphire/prettier-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -175,29 +154,33 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/_sapphire_ratelimits.bucket.html" class="tsd-kind-icon">Bucket</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_sapphire_decorators.functionfallback.html" class="tsd-kind-icon">Function<wbr>Fallback</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketentry.html" class="tsd-kind-icon">Bucket<wbr>Entry</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#lasttime" class="tsd-kind-icon">last<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#settime" class="tsd-kind-icon">set<wbr>Time</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_ratelimits.bucketentry.html#tickets" class="tsd-kind-icon">tickets</a>
-							</li>
-						</ul>
+						<a href="_sapphire_decorators.functionprecondition.html" class="tsd-kind-icon">Function<wbr>Precondition</a>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_ratelimits.bucketlimit.html" class="tsd-kind-icon">Bucket<wbr>Limit</a>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_sapphire_decorators.html#applyoptions" class="tsd-kind-icon">Apply<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/_sapphire_decorators.html#createclassdecorator" class="tsd-kind-icon">create<wbr>Class<wbr>Decorator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_decorators.html#createfunctionprecondition" class="tsd-kind-icon">create<wbr>Function<wbr>Precondition</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_decorators.html#createmethoddecorator" class="tsd-kind-icon">create<wbr>Method<wbr>Decorator</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_decorators.html#enumerable" class="tsd-kind-icon">enumerable</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_decorators.html#enumerablemethod" class="tsd-kind-icon">enumerable<wbr>Method</a>
 					</li>
 				</ul>
 			</nav>
@@ -219,7 +202,6 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
