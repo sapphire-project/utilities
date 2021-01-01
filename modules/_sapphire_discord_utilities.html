@@ -82,6 +82,7 @@
 						<h2>Description</h2>
 					</a>
 					<p>When developing Discord bots or frameworks for Discord bots we often run into certain constants such as regex&#39;s, channel type resolutions and other common functions that would be really nice to get from 1 centralized place. That&#39;s where @sapphire/discord-utilities come in. This package provides common Discord specific utilities for your Discord bots.</p>
+					<p><strong>Important</strong>: If you&#39;re looking for <a href="https://discord.js.org">Discord.js</a> specific utilities then install <a href="https://www.npmjs.com/package/@sapphire/discord.js-utilities">@sapphire/discord.js-utilities</a> instead. <a href="https://www.npmjs.com/package/@sapphire/discord.js-utilities">@sapphire/discord.js-utilities</a> re-exports this package at the root level and peer-depends on this package.</p>
 					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
 						<h2>Features</h2>
 					</a>
@@ -90,6 +91,7 @@
 						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
 						<li>  Offers CommonJS, ESM and UMD bundles</li>
 						<li>  Fully tested</li>
+						<li>  Discord library agnostic</li>
 					</ul>
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
@@ -193,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">Channel<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;#(?&lt;id&gt;\d{17,19})&gt;$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L8">discord-utilities/src/lib/regexes.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L8">discord-utilities/src/lib/regexes.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -216,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">Discord<wbr>Hostname<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(?&lt;subdomain&gt;\w+)\.?(?&lt;hostname&gt;dis(?:cord)?(?:app|merch|status)?)\.(?&lt;tld&gt;com|g(?:d|g|ift)|(?:de(?:sign|v))|media|new|store|net)/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L18">discord-utilities/src/lib/regexes.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L18">discord-utilities/src/lib/regexes.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -248,7 +250,7 @@
 					<div class="tsd-signature tsd-kind-icon">Discord<wbr>Invite<wbr>Link<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:https?:\/\/)?(?:www\.)?(?:discord\.gg\/|discord(?:app)?\.com\/invite\/)?(?&lt;code&gt;[\w\d-]{2,})$/i</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L25">discord-utilities/src/lib/regexes.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L25">discord-utilities/src/lib/regexes.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -271,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">Emoji<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:&lt;(?&lt;animated&gt;a)?:(?&lt;name&gt;\w{2,32}):)?(?&lt;id&gt;\d{17,21})&gt;?$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L34">discord-utilities/src/lib/regexes.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L34">discord-utilities/src/lib/regexes.ts:34</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -300,7 +302,7 @@
 					<div class="tsd-signature tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /&lt;a?:\w{2,32}:\d{17,18}&gt;/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L41">discord-utilities/src/lib/regexes.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L41">discord-utilities/src/lib/regexes.ts:41</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -321,7 +323,7 @@
 					<div class="tsd-signature tsd-kind-icon">Formatted<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L51">discord-utilities/src/lib/regexes.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L51">discord-utilities/src/lib/regexes.ts:51</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -351,7 +353,7 @@
 					<div class="tsd-signature tsd-kind-icon">Http<wbr>Url<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^https?:\/\//</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L58">discord-utilities/src/lib/regexes.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L58">discord-utilities/src/lib/regexes.ts:58</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -374,7 +376,7 @@
 					<div class="tsd-signature tsd-kind-icon">Message<wbr>Link<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?:https:\/\/)?(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?&lt;guildId&gt;(?:\d{17,19}|@me))\/(?&lt;channelId&gt;\d{17,19})\/(?&lt;messageId&gt;\d{17,19})$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L67">discord-utilities/src/lib/regexes.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L67">discord-utilities/src/lib/regexes.ts:67</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -403,7 +405,7 @@
 					<div class="tsd-signature tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /a?:\w{2,32}:\d{17,18}/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L75">discord-utilities/src/lib/regexes.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L75">discord-utilities/src/lib/regexes.ts:75</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -425,7 +427,7 @@
 					<div class="tsd-signature tsd-kind-icon">Parsed<wbr>Custom<wbr>Emoji<wbr>With<wbr>Groups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;animated&gt;a?):(?&lt;name&gt;[^:]+):(?&lt;id&gt;\d{17,19})$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L86">discord-utilities/src/lib/regexes.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L86">discord-utilities/src/lib/regexes.ts:86</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -456,7 +458,7 @@
 					<div class="tsd-signature tsd-kind-icon">Role<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;@&amp;(?&lt;id&gt;\d{17,19})&gt;$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L93">discord-utilities/src/lib/regexes.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L93">discord-utilities/src/lib/regexes.ts:93</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -479,7 +481,7 @@
 					<div class="tsd-signature tsd-kind-icon">Snowflake<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^(?&lt;id&gt;\d{17,19})$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L100">discord-utilities/src/lib/regexes.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L100">discord-utilities/src/lib/regexes.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -502,7 +504,7 @@
 					<div class="tsd-signature tsd-kind-icon">Twemoji<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = twemojiRegex</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L106">discord-utilities/src/lib/regexes.ts:106</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L106">discord-utilities/src/lib/regexes.ts:106</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -522,7 +524,7 @@
 					<div class="tsd-signature tsd-kind-icon">User<wbr>OrMember<wbr>Mention<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^&lt;@!?(?&lt;id&gt;\d{17,19})&gt;$/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L113">discord-utilities/src/lib/regexes.ts:113</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L113">discord-utilities/src/lib/regexes.ts:113</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -545,7 +547,7 @@
 					<div class="tsd-signature tsd-kind-icon">Web<wbr>Socket<wbr>Url<wbr>Regex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^wss?:\/\//</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/7260939/packages/discord-utilities/src/lib/regexes.ts#L120">discord-utilities/src/lib/regexes.ts:120</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/cd0b999/packages/discord-utilities/src/lib/regexes.ts#L120">discord-utilities/src/lib/regexes.ts:120</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
