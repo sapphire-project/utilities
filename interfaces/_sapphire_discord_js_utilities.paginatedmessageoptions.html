@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DebouncedFunc | Sapphire Utilities</title>
+	<title>PaginatedMessageOptions | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,66 +52,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
+					<a href="../modules/_sapphire_discord_js_utilities.html">@sapphire/discord.js-utilities</a>
 				</li>
 				<li>
-					<a href="_sapphire_utilities.debouncedfunc.html">DebouncedFunc</a>
+					<a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html">PaginatedMessageOptions</a>
 				</li>
 			</ul>
-			<h1>Interface DebouncedFunc&lt;FnArgumentsType, FnReturnType&gt;</h1>
+			<h1>Interface PaginatedMessageOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>FnArgumentsType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
-					</li>
-					<li>
-						<h4>FnReturnType</h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">DebouncedFunc</span>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnArgumentsType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/utilities/src/lib/debounce/index.ts#L25">utilities/src/lib/debounce/index.ts:25</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Call the original function, but applying the debounce rules.</p>
-							</div>
-							<p>If the debounced function can be run immediately, this calls it and returns its return
-							value.</p>
-							<p>Otherwise, it returns the return value of the last invokation, or undefined if the debounced
-							function was not invoked yet.</p>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">FnArgumentsType</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						<span class="target">PaginatedMessageOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -120,63 +78,36 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_sapphire_utilities.debouncedfunc.html#cancel" class="tsd-kind-icon">cancel</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_sapphire_utilities.debouncedfunc.html#flush" class="tsd-kind-icon">flush</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html#actions" class="tsd-kind-icon">actions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html#pages" class="tsd-kind-icon">pages</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="cancel" class="tsd-anchor"></a>
-					<h3>cancel</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/utilities/src/lib/debounce/index.ts#L40">utilities/src/lib/debounce/index.ts:40</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Throw away any pending invokation of the debounced function.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="actions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> actions</h3>
+					<div class="tsd-signature tsd-kind-icon">actions<span class="tsd-signature-symbol">:</span> <a href="_sapphire_discord_js_utilities.ipaginatedmessageaction.html" class="tsd-signature-type">IPaginatedMessageAction</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L188">discord.js-utilities/src/lib/PaginatedMessage.ts:188</a></li>
+						</ul>
+					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="flush" class="tsd-anchor"></a>
-					<h3>flush</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">flush<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/utilities/src/lib/debounce/index.ts#L49">utilities/src/lib/debounce/index.ts:49</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>If there is a pending invokation of the debounced function, invoke it immediately and return
-									its return value.</p>
-								</div>
-								<p>Otherwise, return the value from the last invokation, or undefined if the debounced function
-								was never invoked.</p>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FnReturnType</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pages" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pages</h3>
+					<div class="tsd-signature tsd-kind-icon">pages<span class="tsd-signature-symbol">:</span> <a href="../modules/_sapphire_discord_js_utilities.html#messagepage" class="tsd-signature-type">MessagePage</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L187">discord.js-utilities/src/lib/PaginatedMessage.ts:187</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -195,7 +126,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_discord_utilities.html">@sapphire/discord-<wbr>utilities</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_discord_js_utilities.html">@sapphire/discord.js-<wbr>utilities</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -225,28 +156,67 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_type.html">@sapphire/type</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_discord_js_utilities.lazypaginatedmessage.html" class="tsd-kind-icon">Lazy<wbr>Paginated<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_discord_js_utilities.paginatedmessage.html" class="tsd-kind-icon">Paginated<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_sapphire_discord_js_utilities.ipaginatedmessageaction.html" class="tsd-kind-icon">IPaginated<wbr>Message<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html" class="tsd-kind-icon">Paginated<wbr>Message<wbr>Action<wbr>Context</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="_sapphire_utilities.debouncedfunc.html" class="tsd-kind-icon">Debounced<wbr>Func</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html" class="tsd-kind-icon">Paginated<wbr>Message<wbr>Options</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_sapphire_utilities.debouncedfunc.html#cancel" class="tsd-kind-icon">cancel</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html#actions" class="tsd-kind-icon">actions</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="_sapphire_utilities.debouncedfunc.html#flush" class="tsd-kind-icon">flush</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html#pages" class="tsd-kind-icon">pages</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#messagepage" class="tsd-kind-icon">Message<wbr>Page</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#iscategorychannel" class="tsd-kind-icon">is<wbr>Category<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isdmchannel" class="tsd-kind-icon">isDMChannel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isgroupchannel" class="tsd-kind-icon">is<wbr>Group<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isguildbasedchannel" class="tsd-kind-icon">is<wbr>Guild<wbr>Based<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isnewschannel" class="tsd-kind-icon">is<wbr>News<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isstorechannel" class="tsd-kind-icon">is<wbr>Store<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#istextchannel" class="tsd-kind-icon">is<wbr>Text<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_sapphire_discord_js_utilities.html#isvoicechannel" class="tsd-kind-icon">is<wbr>Voice<wbr>Channel</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -267,7 +237,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

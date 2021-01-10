@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@sapphire/prettier-config | Sapphire Utilities</title>
+	<title>@sapphire/async-queue | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_sapphire_prettier_config.html">@sapphire/prettier-config</a>
+					<a href="_sapphire_async_queue.html">@sapphire/async-queue</a>
 				</li>
 			</ul>
-			<h1>Module @sapphire/prettier-config</h1>
+			<h1>Module @sapphire/async-queue</h1>
 		</div>
 	</div>
 </header>
@@ -66,45 +66,46 @@
 				<div class="tsd-comment tsd-typography">
 					<div align="center">
 						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire.png" alt="Sapphire Logo"></p>
-						<a href="#sapphireprettier-config" id="sapphireprettier-config" style="color: inherit; text-decoration: none;">
-							<h1>@sapphire/prettier-config</h1>
+						<a href="#sapphireasync-queue" id="sapphireasync-queue" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/async-queue</h1>
 						</a>
-						<p><strong>Prettier configuration for all Sapphire Project repositories.</strong></p>
+						<p><strong>Sequential asynchronous lock-based queue for promises.</strong></p>
 						<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
 							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
-							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
 							<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
-							<a href="https://bundlephobia.com/result?p=@sapphire/prettier-config"><img src="https://img.shields.io/bundlephobia/min/@sapphire/prettier-config?logo=webpack&style=flat-square" alt="npm bundle size"></a>
-							<a href="https://www.npmjs.com/package/@sapphire/prettier-config"><img src="https://img.shields.io/npm/v/@sapphire/prettier-config?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/async-queue"><img src="https://img.shields.io/bundlephobia/min/@sapphire/async-queue?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/async-queue"><img src="https://img.shields.io/npm/v/@sapphire/async-queue?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
 						<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
 					</div>
+					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+						<h2>Description</h2>
+					</a>
+					<p>Ever needed a queue for a set of promises? This is the package for you.</p>
+					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+						<h2>Features</h2>
+					</a>
+					<ul>
+						<li>  Written in TypeScript</li>
+						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
+						<li>  Offers CommonJS, ESM and UMD bundles</li>
+						<li>  Fully tested</li>
+					</ul>
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
 					</a>
-					<p><strong>First install the Peer Dependencies</strong></p>
-					<pre><code class="language-sh">yarn add -D prettier</code></pre>
-					<p><strong>Then install <code>@sapphire/prettier-config</code></strong></p>
-					<pre><code class="language-sh">yarn add -D @sapphire/prettier-config</code></pre>
+					<pre><code class="language-sh">yarn add @sapphire/async-queue
+<span class="hljs-comment"># npm install @sapphire/async-queue</span></code></pre>
 					<hr>
-					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-						<h2>Usage</h2>
-					</a>
-					<p>Add the Prettier config to your <code>package.json</code>:</p>
-					<pre><code class="language-json">{
-    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;my-project&quot;</span>,
-    <span class="hljs-attr">&quot;prettier&quot;</span>: <span class="hljs-string">&quot;@sapphire/prettier-config&quot;</span>
-}</code></pre>
-					<p>Or to <code>prettierrc.js</code>:</p>
-					<pre><code class="language-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/prettier-config&#x27;</span>);</code></pre>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
 					</a>
-					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_prettier_config.html">documentation</a>.</p>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_async_queue.html">documentation</a>.</p>
 					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
 						<h2>Buy us some doughnuts</h2>
 					</a>
 					<p>Sapphire Project is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
-					<p>We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
+					<p>We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
 					<table>
 						<thead>
 							<tr>
@@ -163,137 +164,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Object literals</h3>
+							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-module"><a href="_sapphire_prettier_config.html#prettierconfig" class="tsd-kind-icon">prettier<wbr>Config</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_async_queue.asyncqueue.html" class="tsd-kind-icon">Async<wbr>Queue</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-module">
-					<a name="prettierconfig" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> prettier<wbr>Config</h3>
-					<div class="tsd-signature tsd-kind-icon">prettier<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L11">prettier-config/src/index.ts:11</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Default Prettier configuration for Sapphire Projects</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>example</dt>
-							<dd><pre><code class="language-json">{
-  <span class="hljs-attr">&quot;prettier&quot;</span>: <span class="hljs-string">&quot;@sapphire/prettier-config&quot;</span>
-}</code></pre>
-							</dd>
-						</dl>
-					</div>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig._schema" class="tsd-anchor"></a>
-						<h3>$schema</h3>
-						<div class="tsd-signature tsd-kind-icon">$schema<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"http://json.schemastore.org/prettierrc"</span><span class="tsd-signature-symbol"> = &quot;http://json.schemastore.org/prettierrc&quot;</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L12">prettier-config/src/index.ts:12</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.endofline" class="tsd-anchor"></a>
-						<h3>end<wbr>OfLine</h3>
-						<div class="tsd-signature tsd-kind-icon">end<wbr>OfLine<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"lf"</span><span class="tsd-signature-symbol"> = &quot;lf&quot;</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L13">prettier-config/src/index.ts:13</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.overrides" class="tsd-anchor"></a>
-						<h3>overrides</h3>
-						<div class="tsd-signature tsd-kind-icon">overrides<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">{ </span>files<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>files<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [{files: &#x27;.all-contributorsrc&#x27;,options: {parser: &#x27;json&#x27;}},{files: &#x27;*.yml&#x27;,options: {tabWidth: 2,useTabs: false}}]</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L21">prettier-config/src/index.ts:21</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.printwidth" class="tsd-anchor"></a>
-						<h3>print<wbr>Width</h3>
-						<div class="tsd-signature tsd-kind-icon">print<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 150</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L14">prettier-config/src/index.ts:14</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.quoteprops" class="tsd-anchor"></a>
-						<h3>quote<wbr>Props</h3>
-						<div class="tsd-signature tsd-kind-icon">quote<wbr>Props<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"as-needed"</span><span class="tsd-signature-symbol"> = &quot;as-needed&quot;</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L15">prettier-config/src/index.ts:15</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.semi" class="tsd-anchor"></a>
-						<h3>semi</h3>
-						<div class="tsd-signature tsd-kind-icon">semi<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L16">prettier-config/src/index.ts:16</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.singlequote" class="tsd-anchor"></a>
-						<h3>single<wbr>Quote</h3>
-						<div class="tsd-signature tsd-kind-icon">single<wbr>Quote<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L17">prettier-config/src/index.ts:17</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.tabwidth" class="tsd-anchor"></a>
-						<h3>tab<wbr>Width</h3>
-						<div class="tsd-signature tsd-kind-icon">tab<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 4</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L18">prettier-config/src/index.ts:18</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.trailingcomma" class="tsd-anchor"></a>
-						<h3>trailing<wbr>Comma</h3>
-						<div class="tsd-signature tsd-kind-icon">trailing<wbr>Comma<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"none"</span><span class="tsd-signature-symbol"> = &quot;none&quot;</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L19">prettier-config/src/index.ts:19</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
-						<a name="prettierconfig.usetabs" class="tsd-anchor"></a>
-						<h3>use<wbr>Tabs</h3>
-						<div class="tsd-signature tsd-kind-icon">use<wbr>Tabs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> = true</span></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/prettier-config/src/index.ts#L20">prettier-config/src/index.ts:20</a></li>
-							</ul>
-						</aside>
-					</section>
 				</section>
 			</section>
 		</div>
@@ -303,7 +179,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_sapphire_async_queue.html">@sapphire/async-<wbr>queue</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -321,7 +197,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_sapphire_prettier_config.html">@sapphire/prettier-<wbr>config</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -349,8 +225,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
-						<a href="_sapphire_prettier_config.html#prettierconfig" class="tsd-kind-icon">prettier<wbr>Config</a>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_async_queue.asyncqueue.html" class="tsd-kind-icon">Async<wbr>Queue</a>
 					</li>
 				</ul>
 			</nav>
