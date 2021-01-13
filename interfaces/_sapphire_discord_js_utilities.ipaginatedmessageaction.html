@@ -65,6 +65,34 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><pre><code class="language-typescript"><span class="hljs-comment">// To utilize actions you can use the &lt;a href=&quot;_sapphire_discord_js_utilities.ipaginatedmessageaction.html&quot;&gt;IPaginatedMessageAction&lt;/a&gt; by implementing it into a class.</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ForwardAction</span> <span class="hljs-title">implements</span> <span class="hljs-title">IPaginatedMessageAction</span> </span>{
+  <span class="hljs-keyword">public</span> id = <span class="hljs-string">&#x27;▶️&#x27;</span>;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-title">run</span>(<span class="hljs-params">{ handler }</span>)</span> {
+    <span class="hljs-keyword">if</span> (handler.index !== handler.pages.length - <span class="hljs-number">1</span>) ++handler.index;
+  }
+}
+
+<span class="hljs-comment">// You can also give the object directly.</span>
+
+<span class="hljs-keyword">const</span> StopAction: IPaginatedMessageAction {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;⏹️&#x27;</span>,
+  <span class="hljs-attr">disableResponseEdit</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">run</span>: <span class="hljs-function">(<span class="hljs-params">{ response, collector }</span>) =&gt;</span> {
+    <span class="hljs-keyword">await</span> response!.reactions.removeAll();
+    collector!.stop();
+  }
+}<span class="hljs-string">``</span><span class="hljs-string">`</span></code></pre>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -100,7 +128,7 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L174">discord.js-utilities/src/lib/PaginatedMessage.ts:174</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L312">discord.js-utilities/src/lib/PaginatedMessage.ts:312</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L175">discord.js-utilities/src/lib/PaginatedMessage.ts:175</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L313">discord.js-utilities/src/lib/PaginatedMessage.ts:313</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

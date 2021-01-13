@@ -205,9 +205,32 @@
 					<div class="tsd-signature tsd-kind-icon">Message<wbr>Page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pages<span class="tsd-signature-symbol">: </span><a href="_sapphire_discord_js_utilities.html#messagepage" class="tsd-signature-type">MessagePage</a><span class="tsd-signature-symbol">[]</span>, handler<span class="tsd-signature-symbol">: </span><a href="../classes/_sapphire_discord_js_utilities.paginatedmessage.html" class="tsd-signature-type">PaginatedMessage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="_sapphire_utilities.html#awaited" class="tsd-signature-type">Awaited</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">APIMessage</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">APIMessage</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L191">discord.js-utilities/src/lib/PaginatedMessage.ts:191</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L354">discord.js-utilities/src/lib/PaginatedMessage.ts:354</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The pages that are used for <a href="../classes/_sapphire_discord_js_utilities.paginatedmessage.html#pages">PaginatedMessage.pages</a></p>
+						</div>
+						<p>Pages can be either an <a href="https://discord.js.org/#/docs/main/stable/class/APIMessage" class="external">APIMessage</a> directly,
+						or an awaited function which returns an <a href="https://discord.js.org/#/docs/main/stable/class/APIMessage" class="external">APIMessage</a>.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span class="hljs-comment">// Direct usage as an APIMessage</span>
+
+<span class="hljs-keyword">new</span> APIMessage(message.channel, {
+  <span class="hljs-attr">context</span>: <span class="hljs-string">&#x27;Test content!&#x27;</span>,
+});
+
+<span class="hljs-comment">// An awaited function. This function also passes index, pages, and handler.</span>
+
+<span class="hljs-function">(<span class="hljs-params">index, pages</span>) =&gt;</span>
+  <span class="hljs-keyword">new</span> APIMessage(message.channel, {
+    <span class="hljs-attr">embed</span>: <span class="hljs-keyword">new</span> MessageEmbed().setFooter(<span class="hljs-string">`Page <span class="hljs-subst">${index + <span class="hljs-number">1</span>}</span> / <span class="hljs-subst">${pages.length}</span>`</span>)
+  });</code></pre>
+							</dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -222,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L17">discord.js-utilities/src/lib/type-guards.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L17">discord.js-utilities/src/lib/type-guards.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L25">discord.js-utilities/src/lib/type-guards.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L25">discord.js-utilities/src/lib/type-guards.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L33">discord.js-utilities/src/lib/type-guards.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L33">discord.js-utilities/src/lib/type-guards.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -315,7 +338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L41">discord.js-utilities/src/lib/type-guards.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L41">discord.js-utilities/src/lib/type-guards.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -346,7 +369,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L49">discord.js-utilities/src/lib/type-guards.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L49">discord.js-utilities/src/lib/type-guards.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -377,7 +400,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L57">discord.js-utilities/src/lib/type-guards.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L57">discord.js-utilities/src/lib/type-guards.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -408,7 +431,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L65">discord.js-utilities/src/lib/type-guards.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L65">discord.js-utilities/src/lib/type-guards.ts:65</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -439,7 +462,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/ba81832/packages/discord.js-utilities/src/lib/type-guards.ts#L73">discord.js-utilities/src/lib/type-guards.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/8d99797/packages/discord.js-utilities/src/lib/type-guards.ts#L73">discord.js-utilities/src/lib/type-guards.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
