@@ -109,7 +109,8 @@
 						<h2>Installation</h2>
 					</a>
 					<pre><code class="language-sh">yarn add @sapphire/ratelimits
-<span class="hljs-comment"># npm install @sapphire/ratelimits</span></code></pre>
+<span class="hljs-comment"># npm install @sapphire/ratelimits</span>
+</code></pre>
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h2>Usage</h2>
 					</a>
@@ -124,7 +125,8 @@
 <span class="hljs-keyword">const</span> bucket = <span class="hljs-keyword">new</span> Bucket().setDelay(<span class="hljs-number">5000</span>);
 
 <span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span></code></pre>
+<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span>
+</code></pre>
 					<a href="#leaky-bucket" id="leaky-bucket" style="color: inherit; text-decoration: none;">
 						<h3>Leaky Bucket</h3>
 					</a>
@@ -136,7 +138,8 @@
 
 <span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
 <span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 0</span>
-<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span></code></pre>
+<span class="hljs-built_in">console</span>.log(bucket.take(<span class="hljs-number">420</span>)); <span class="hljs-comment">// -&gt; 5000</span>
+</code></pre>
 					<hr>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
