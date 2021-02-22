@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SnowflakeGenerateOptions | Sapphire Utilities</title>
+	<title>IMessagePrompterNumberStrategyOptions | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,32 +52,36 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_snowflake.html">@sapphire/snowflake</a>
+					<a href="../modules/_sapphire_discord_js_utilities.html">@sapphire/discord.js-utilities</a>
 				</li>
 				<li>
-					<a href="_sapphire_snowflake.snowflakegenerateoptions.html">SnowflakeGenerateOptions</a>
+					<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html">IMessagePrompterNumberStrategyOptions</a>
 				</li>
 			</ul>
-			<h1>Interface SnowflakeGenerateOptions</h1>
+			<h1>Interface IMessagePrompterNumberStrategyOptions</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Options for Snowflake#generate</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SnowflakeGenerateOptions</span>
+						<a href="_sapphire_discord_js_utilities.imessageprompterstrategyoptions-1.html" class="tsd-signature-type">IMessagePrompterStrategyOptions</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IMessagePrompterNumberStrategyOptions</span>
+							</li>
+						</ul>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_sapphire_discord_js_utilities.messageprompternumberstrategy-1.html" class="tsd-signature-type">MessagePrompterNumberStrategy</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -87,10 +91,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_snowflake.snowflakegenerateoptions.html#increment" class="tsd-kind-icon">increment</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_snowflake.snowflakegenerateoptions.html#processid" class="tsd-kind-icon">processID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_snowflake.snowflakegenerateoptions.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_snowflake.snowflakegenerateoptions.html#workerid" class="tsd-kind-icon">workerID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#end" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#explicitreturn" class="tsd-kind-icon">explicit<wbr>Return</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#numberemojis" class="tsd-kind-icon">number<wbr>Emojis</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#timeout" class="tsd-kind-icon">timeout</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,87 +104,56 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="increment" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> increment</h3>
-					<div class="tsd-signature tsd-kind-icon">increment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></div>
+					<a name="end" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> end</h3>
+					<div class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/snowflake/src/lib/Snowflake.ts#L105">snowflake/src/lib/Snowflake.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts#L15">discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts:15</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The increment to use</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>0n</p>
-							</dd>
-							<dt>remark</dt>
-							<dd><p>keep in mind that this bigint is auto-incremented between generate calls</p>
-							</dd>
-						</dl>
-					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="explicitreturn" class="tsd-anchor"></a>
+					<h3>explicit<wbr>Return</h3>
+					<div class="tsd-signature tsd-kind-icon">explicit<wbr>Return<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterstrategyoptions-1.html">IMessagePrompterStrategyOptions</a>.<a href="_sapphire_discord_js_utilities.imessageprompterstrategyoptions-1.html#explicitreturn">explicitReturn</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts#L5">discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts:5</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="processid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> processID</h3>
-					<div class="tsd-signature tsd-kind-icon">processID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></div>
+					<a name="numberemojis" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> number<wbr>Emojis</h3>
+					<div class="tsd-signature tsd-kind-icon">number<wbr>Emojis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EmojiIdentifierResolvable</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/snowflake/src/lib/Snowflake.ts#L117">snowflake/src/lib/Snowflake.ts:117</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts#L16">discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts:16</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The process ID to use</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>1n</p>
-							</dd>
-						</dl>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="timestamp" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> timestamp</h3>
-					<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
+					<a name="start" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> start</h3>
+					<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/snowflake/src/lib/Snowflake.ts#L98">snowflake/src/lib/Snowflake.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts#L14">discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts:14</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Timestamp or date of the snowflake to generate</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>Date.now()</p>
-							</dd>
-						</dl>
-					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="workerid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> workerID</h3>
-					<div class="tsd-signature tsd-kind-icon">workerID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3>timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterstrategyoptions-1.html">IMessagePrompterStrategyOptions</a>.<a href="_sapphire_discord_js_utilities.imessageprompterstrategyoptions-1.html#timeout">timeout</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/snowflake/src/lib/Snowflake.ts#L111">snowflake/src/lib/Snowflake.ts:111</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/d120d95/packages/discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts#L4">discord.js-utilities/src/lib/MessagePrompter/strategyOptions.ts:4</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The worker ID to use</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>default</dt>
-							<dd><p>1n</p>
-							</dd>
-						</dl>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -198,7 +172,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_discord_utilities.html">@sapphire/discord-<wbr>utilities</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_discord_js_utilities.html">@sapphire/discord.js-<wbr>utilities</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -213,7 +187,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_ratelimits.html">@sapphire/ratelimits</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_snowflake.html">@sapphire/snowflake</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -235,34 +209,25 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_sapphire_snowflake.discordsnowflake.html" class="tsd-kind-icon">Discord<wbr>Snowflake</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_sapphire_snowflake.snowflake.html" class="tsd-kind-icon">Snowflake</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_sapphire_snowflake.twittersnowflake.html" class="tsd-kind-icon">Twitter<wbr>Snowflake</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_snowflake.deconstructedsnowflake.html" class="tsd-kind-icon">Deconstructed<wbr>Snowflake</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_snowflake.snowflakegenerateoptions.html" class="tsd-kind-icon">Snowflake<wbr>Generate<wbr>Options</a>
+						<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html" class="tsd-kind-icon">IMessage<wbr>Prompter<wbr>Number<wbr>Strategy<wbr>Options</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_snowflake.snowflakegenerateoptions.html#increment" class="tsd-kind-icon">increment</a>
+								<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#end" class="tsd-kind-icon">end</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#explicitreturn" class="tsd-kind-icon">explicit<wbr>Return</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_snowflake.snowflakegenerateoptions.html#processid" class="tsd-kind-icon">processID</a>
+								<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#numberemojis" class="tsd-kind-icon">number<wbr>Emojis</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_snowflake.snowflakegenerateoptions.html#timestamp" class="tsd-kind-icon">timestamp</a>
+								<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#start" class="tsd-kind-icon">start</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_snowflake.snowflakegenerateoptions.html#workerid" class="tsd-kind-icon">workerID</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompternumberstrategyoptions-1.html#timeout" class="tsd-kind-icon">timeout</a>
 							</li>
 						</ul>
 					</li>
