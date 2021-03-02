@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PaginatedMessageActionContext | Sapphire Utilities</title>
+	<title>IMessagePrompterExplicitMessageReturn | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,28 +55,26 @@
 					<a href="../modules/_sapphire_discord_js_utilities.html">@sapphire/discord.js-utilities</a>
 				</li>
 				<li>
-					<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html">PaginatedMessageActionContext</a>
+					<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html">IMessagePrompterExplicitMessageReturn</a>
 				</li>
 			</ul>
-			<h1>Interface PaginatedMessageActionContext</h1>
+			<h1>Interface IMessagePrompterExplicitMessageReturn</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The context to be used in <a href="_sapphire_discord_js_utilities.ipaginatedmessageaction.html">IPaginatedMessageAction</a>.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">PaginatedMessageActionContext</span>
+						<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html" class="tsd-signature-type">IMessagePrompterExplicitReturnBase</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">IMessagePrompterExplicitMessageReturn</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -87,11 +85,12 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#author" class="tsd-kind-icon">author</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#channel" class="tsd-kind-icon">channel</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#collector" class="tsd-kind-icon">collector</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#handler" class="tsd-kind-icon">handler</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#response" class="tsd-kind-icon">response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#appliedmessage" class="tsd-kind-icon">applied<wbr>Message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#emoji" class="tsd-kind-icon">emoji</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#message" class="tsd-kind-icon">message</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#reaction" class="tsd-kind-icon">reaction</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#response" class="tsd-kind-icon">response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#strategy" class="tsd-kind-icon">strategy</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,53 +98,68 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="author" class="tsd-anchor"></a>
-					<h3>author</h3>
-					<div class="tsd-signature tsd-kind-icon">author<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">User</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="appliedmessage" class="tsd-anchor"></a>
+					<h3>applied<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">applied<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Message</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html">IMessagePrompterExplicitReturnBase</a>.<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html#appliedmessage">appliedMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L409">discord.js-utilities/src/lib/PaginatedMessage.ts:409</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L9">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="channel" class="tsd-anchor"></a>
-					<h3>channel</h3>
-					<div class="tsd-signature tsd-kind-icon">channel<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TextChannel</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">NewsChannel</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="emoji" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> emoji</h3>
+					<div class="tsd-signature tsd-kind-icon">emoji<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">GuildEmoji</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReactionEmoji</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html">IMessagePrompterExplicitReturnBase</a>.<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html#emoji">emoji</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L410">discord.js-utilities/src/lib/PaginatedMessage.ts:410</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L6">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="collector" class="tsd-anchor"></a>
-					<h3>collector</h3>
-					<div class="tsd-signature tsd-kind-icon">collector<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReactionCollector</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="message" class="tsd-anchor"></a>
+					<h3>message</h3>
+					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <a href="../modules/_sapphire_discord_js_utilities.html#messagepromptermessage" class="tsd-signature-type">MessagePrompterMessage</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html">IMessagePrompterExplicitReturnBase</a>.<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html#message">message</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L412">discord.js-utilities/src/lib/PaginatedMessage.ts:412</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L10">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="handler" class="tsd-anchor"></a>
-					<h3>handler</h3>
-					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <a href="../classes/_sapphire_discord_js_utilities.paginatedmessage.html" class="tsd-signature-type">PaginatedMessage</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="reaction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> reaction</h3>
+					<div class="tsd-signature tsd-kind-icon">reaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EmojiIdentifierResolvable</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html">IMessagePrompterExplicitReturnBase</a>.<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html#reaction">reaction</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L408">discord.js-utilities/src/lib/PaginatedMessage.ts:408</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L7">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="response" class="tsd-anchor"></a>
-					<h3>response</h3>
-					<div class="tsd-signature tsd-kind-icon">response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Message</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> response</h3>
+					<div class="tsd-signature tsd-kind-icon">response<span class="tsd-signature-symbol">:</span> <a href="../enums/_sapphire_discord_js_utilities.messageprompterstrategies.html#message" class="tsd-signature-type">Message</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/PaginatedMessage.ts#L411">discord.js-utilities/src/lib/PaginatedMessage.ts:411</a></li>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L22">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="strategy" class="tsd-anchor"></a>
+					<h3>strategy</h3>
+					<div class="tsd-signature tsd-kind-icon">strategy<span class="tsd-signature-symbol">:</span> <a href="../classes/_sapphire_discord_js_utilities.messageprompterbasestrategy.html" class="tsd-signature-type">MessagePrompterBaseStrategy</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html">IMessagePrompterExplicitReturnBase</a>.<a href="_sapphire_discord_js_utilities.imessageprompterexplicitreturnbase.html#strategy">strategy</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/sapphire-project/utilities/blob/1876355/packages/discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts#L8">discord.js-utilities/src/lib/MessagePrompter/ExplicitReturnTypes.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -239,9 +253,33 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.imessageprompterexplicitconfirmreturn.html" class="tsd-kind-icon">IMessage<wbr>Prompter<wbr>Explicit<wbr>Confirm<wbr>Return</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html" class="tsd-kind-icon">IMessage<wbr>Prompter<wbr>Explicit<wbr>Message<wbr>Return</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#appliedmessage" class="tsd-kind-icon">applied<wbr>Message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#emoji" class="tsd-kind-icon">emoji</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#message" class="tsd-kind-icon">message</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#reaction" class="tsd-kind-icon">reaction</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#response" class="tsd-kind-icon">response</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_sapphire_discord_js_utilities.imessageprompterexplicitmessagereturn.html#strategy" class="tsd-kind-icon">strategy</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.imessageprompterexplicitnumberreturn.html" class="tsd-kind-icon">IMessage<wbr>Prompter<wbr>Explicit<wbr>Number<wbr>Return</a>
 					</li>
@@ -260,30 +298,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.ipaginatedmessageaction.html" class="tsd-kind-icon">IPaginated<wbr>Message<wbr>Action</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html" class="tsd-kind-icon">Paginated<wbr>Message<wbr>Action<wbr>Context</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#author" class="tsd-kind-icon">author</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#channel" class="tsd-kind-icon">channel</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#collector" class="tsd-kind-icon">collector</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#handler" class="tsd-kind-icon">handler</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_sapphire_discord_js_utilities.paginatedmessageactioncontext.html#response" class="tsd-kind-icon">response</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_sapphire_discord_js_utilities.paginatedmessageoptions.html" class="tsd-kind-icon">Paginated<wbr>Message<wbr>Options</a>
 					</li>
