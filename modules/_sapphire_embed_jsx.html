@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@sapphire/type | Sapphire Utilities</title>
+	<title>@sapphire/embed-jsx | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_sapphire_type.html">@sapphire/type</a>
+					<a href="_sapphire_embed_jsx.html">@sapphire/embed-jsx</a>
 				</li>
 			</ul>
-			<h1>Module @sapphire/type</h1>
+			<h1>Module @sapphire/embed-jsx</h1>
 		</div>
 	</div>
 </header>
@@ -66,76 +66,61 @@
 				<div class="tsd-comment tsd-typography">
 					<div align="center">
 						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire-banner.png" alt="Sapphire Logo"></p>
-						<a href="#sapphiretype" id="sapphiretype" style="color: inherit; text-decoration: none;">
-							<h1>@sapphire/type</h1>
+						<a href="#sapphireembed-jsx" id="sapphireembed-jsx" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/embed-jsx</h1>
 						</a>
-						<p><strong>A type detection utility for JavaScript.</strong></p>
-						<p><a href="https://github.com/sapphire-community/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-community/utilities" alt="GitHub"></a>
-							<a href="https://lgtm.com/projects/g/sapphire-community/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-community/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
-							<a href="https://lgtm.com/projects/g/sapphire-community/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-community/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
-							<a href="https://coveralls.io/github/sapphire-community/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-community/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
-							<a href="https://bundlephobia.com/result?p=@sapphire/type"><img src="https://img.shields.io/bundlephobia/min/@sapphire/type?logo=webpack&style=flat-square" alt="npm bundle size"></a>
-							<a href="https://www.npmjs.com/package/@sapphire/type"><img src="https://img.shields.io/npm/v/@sapphire/type?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
-						<a href="https://depfu.com/github/sapphire-community/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
+						<p><a href="https://github.com/sapphire-project/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-project/utilities" alt="GitHub"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-project/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-project/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript"></a>
+							<a href="https://coveralls.io/github/sapphire-project/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-project/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/embed-jsx"><img src="https://img.shields.io/bundlephobia/min/@sapphire/embed-jsx?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/embed-jsx"><img src="https://img.shields.io/npm/v/@sapphire/embed-jsx?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+						<a href="https://depfu.com/github/sapphire-project/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
 					</div>
-					<p><strong>Table of Contents</strong></p>
-					<ul>
-						<li>  <a href="#description">Description</a></li>
-						<li>  <a href="#features">Features</a></li>
-						<li>  <a href="#installation">Installation</a></li>
-						<li><a href="#usage">Usage</a><ul>
-								<li>  <a href="#basic-usage">Basic Usage</a></li>
-							</ul>
-						</li>
-						<li>  <a href="#api-documentation">API Documentation</a></li>
-						<li>  <a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
-						<li>  <a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
-					</ul>
 					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 						<h2>Description</h2>
 					</a>
-					<p>Sometimes there is a need to know what a value&#39;s type of something is, this package exists to satisfy those needs by implementing a parser that can retrieve the type of the value recursively and process a string similar to TypeScript&#39;s types.</p>
+					<p>Discord embeds have a structure that translates very nicely to JSX syntax, making it a very interesting way to define embed structures in this variant of regular JavaScript. To translate the JSX code to DiscordJS compatible <code>MessageEmbed</code> data there is this library.</p>
 					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
 						<h2>Features</h2>
 					</a>
 					<ul>
 						<li>  Written in TypeScript</li>
-						<li>  Bundled with Rollup so it can be used in NodeJS and browsers</li>
-						<li>  Offers CommonJS, ESM and UMD bundles</li>
+						<li>  Offers CommonJS and ESM variants</li>
 						<li>  Fully tested</li>
 					</ul>
 					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 						<h2>Installation</h2>
 					</a>
-					<pre><code class="language-sh">yarn add @sapphire/<span class="hljs-built_in">type</span>
-<span class="hljs-comment"># npm install @sapphire/type</span>
+					<pre><code class="language-sh">yarn add @sapphire/embed-jsx
 </code></pre>
 					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 						<h2>Usage</h2>
 					</a>
-					<p><strong>Note:</strong> While this section uses <code>require</code>, the imports match 1:1 with ESM imports. For example <code>const { Type } = require(&#39;@sapphire/type&#39;)</code> equals <code>import { Type } from &#39;@sapphire/type&#39;</code>.</p>
-					<a href="#basic-usage" id="basic-usage" style="color: inherit; text-decoration: none;">
-						<h3>Basic Usage</h3>
-					</a>
-					<pre><code class="language-ts"><span class="hljs-comment">// Import the Type class</span>
-<span class="hljs-keyword">const</span> { Type } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@sapphire/type&#x27;</span>);
-
-<span class="hljs-comment">// Define a Type with an array of two numbers</span>
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">type</span> = <span class="hljs-keyword">new</span> Type([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">type</span>.toString());
-<span class="hljs-comment">// Logs: Array&lt;number&gt;</span>
+					<p>In your tsconfig.json, add</p>
+					<pre><code class="language-json">{
+    <span class="hljs-attr">&quot;compilerOptions&quot;</span>: {
+        <span class="hljs-attr">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;react&quot;</span>,
+        <span class="hljs-attr">&quot;jsxFactory&quot;</span>: <span class="hljs-string">&quot;EmbedJsx.make&quot;</span>
+    }
+}
 </code></pre>
-					<hr>
+					<p>and in any tsx file, import the EmbedJsx namespace as you would if you were using React</p>
+					<pre><code class="language-ts"><span class="hljs-keyword">import</span> { EmbedJsx } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sapphire/embed-jsx&#x27;</span>;
+</code></pre>
+					<p>Note: as of now the package is currently not fully typed, so to get around any compiler errors you may have to add</p>
+					<pre><code class="language-json">&quot;noImplicitAny&quot;: false
+</code></pre>
+					<p>to your tsconfig.json</p>
 					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
 						<h2>API Documentation</h2>
 					</a>
-					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-community.github.io/utilities/modules/_sapphire_type.html">documentation</a>.</p>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-project.github.io/utilities/modules/_sapphire_embed_jsx.html">documentation</a></p>
 					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
 						<h2>Buy us some doughnuts</h2>
 					</a>
-					<p>Sapphire Community is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
-					<p>We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
+					<p>Sapphire Project is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
+					<p>We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
 					<table>
 						<thead>
 							<tr>
@@ -145,19 +130,19 @@
 						</thead>
 						<tbody><tr>
 								<td align="center">Open Collective</td>
-								<td align="center"><a href="https://sapphirejs.com/opencollective">Click Here</a></td>
+								<td align="center"><a href="https://opencollective.com/sapphire-project">Click Here</a></td>
 							</tr>
 							<tr>
 								<td align="center">Ko-fi</td>
-								<td align="center"><a href="https://sapphirejs.com/kofi">Click Here</a></td>
+								<td align="center"><a href="https://ko-fi.com/sapphireproject">Click Here</a></td>
 							</tr>
 							<tr>
 								<td align="center">Patreon</td>
-								<td align="center"><a href="https://sapphirejs.com/patreon">Click Here</a></td>
+								<td align="center"><a href="https://www.patreon.com/sapphire_project">Click Here</a></td>
 							</tr>
 							<tr>
 								<td align="center">PayPal</td>
-								<td align="center"><a href="https://sapphirejs.com/paypal">Click Here</a></td>
+								<td align="center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=SP738BQTQQYZY">Click Here</a></td>
 							</tr>
 					</tbody></table>
 					<a href="#contributors-✨" id="contributors-✨" style="color: inherit; text-decoration: none;">
@@ -203,9 +188,9 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Namespaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_type.type.html" class="tsd-kind-icon">Type</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_sapphire_embed_jsx.embedjsx.html" class="tsd-kind-icon">Embed<wbr>Jsx</a></li>
 							</ul>
 						</section>
 					</div>
@@ -230,8 +215,13 @@
 					<li class=" tsd-kind-module">
 						<a href="_sapphire_discord_js_utilities.html">@sapphire/discord.js-<wbr>utilities</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_sapphire_embed_jsx.html">@sapphire/embed-<wbr>jsx</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-module">
+								<a href="_sapphire_embed_jsx.embedjsx.html">Embed<wbr>Jsx</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
@@ -257,7 +247,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_sapphire_ts_config.html">@sapphire/ts-<wbr>config</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_sapphire_type.html">@sapphire/type</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -267,9 +257,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_sapphire_type.type.html" class="tsd-kind-icon">Type</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
