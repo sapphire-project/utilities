@@ -1,0 +1,621 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@sapphire/fetch | Sapphire Utilities</title>
+	<meta name="description" content="Documentation for Sapphire Utilities">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Sapphire Utilities</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_sapphire_fetch.html">@sapphire/fetch</a>
+				</li>
+			</ul>
+			<h1>Module @sapphire/fetch</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div align="center">
+						<p><img src="https://cdn.skyra.pw/gh-assets/sapphire-banner.png" alt="Sapphire Logo"></p>
+						<a href="#sapphirefetch" id="sapphirefetch" style="color: inherit; text-decoration: none;">
+							<h1>@sapphire/fetch</h1>
+						</a>
+						<p><strong>Tiny wrapper around node-fetch for improved TypeScript and data type support</strong></p>
+						<p><a href="https://github.com/sapphire-community/utilities/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/sapphire-community/utilities" alt="GitHub"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-community/utilities/alerts/"><img src="https://img.shields.io/lgtm/alerts/g/sapphire-community/utilities.svg?logo=lgtm&logoWidth=18" alt="Total alerts"></a>
+							<a href="https://lgtm.com/projects/g/sapphire-community/utilities/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/g/sapphire-community/utilities.svg?logo=lgtm&logoWidth=18" alt="Language grade: JavaScript/TypeScript"></a>
+							<a href="https://coveralls.io/github/sapphire-community/utilities?branch=main"><img src="https://coveralls.io/repos/github/sapphire-community/utilities/badge.svg?branch=main" alt="Coverage Status"></a>
+							<a href="https://bundlephobia.com/result?p=@sapphire/fetch"><img src="https://img.shields.io/bundlephobia/min/@sapphire/fetch?logo=webpack&style=flat-square" alt="npm bundle size"></a>
+							<a href="https://www.npmjs.com/package/@sapphire/fetch"><img src="https://img.shields.io/npm/v/@sapphire/fetch?color=crimson&logo=npm&style=flat-square" alt="npm"></a>
+						<a href="https://depfu.com/github/sapphire-community/utilities?project_id=15195"><img src="https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg" alt="Depfu"></a></p>
+					</div>
+					<p><strong>Table of Contents</strong></p>
+					<ul>
+						<li><a href="#sapphirefetch">@sapphire/fetch</a><ul>
+								<li>  <a href="#description">Description</a></li>
+								<li>  <a href="#features">Features</a></li>
+								<li><a href="#installation">Installation</a><ul>
+										<li>  <a href="#node-fetch-types">Node-fetch types</a></li>
+									</ul>
+								</li>
+								<li><a href="#usage">Usage</a><ul>
+										<li>  <a href="#get-ing-json-data"><code>GET</code>-ing JSON data</a></li>
+										<li>  <a href="#get-ing-buffer-data-images-etc"><code>GET</code>-ing Buffer data (images, etc.)</a></li>
+										<li>  <a href="#post-ing-json-data"><code>POST</code>-ing JSON data</a></li>
+									</ul>
+								</li>
+								<li>  <a href="#api-documentation">API Documentation</a></li>
+								<li>  <a href="#buy-us-some-doughnuts">Buy us some doughnuts</a></li>
+								<li>  <a href="#contributors-%E2%9C%A8">Contributors ✨</a></li>
+							</ul>
+						</li>
+					</ul>
+					<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+						<h2>Description</h2>
+					</a>
+					<p><a href="https://github.com/node-fetch/node-fetch">node-fetch</a> is already a great library for making API calls, but because it focuses solely on bringing the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a> to Node.js, it doesn&#39;t provide specific error messages and handling for different return types (JSON, Buffer, plain text, etc). This is where <code>@sapphire/fetch</code> comes in. The syntax is more restrictive than that of <a href="https://github.com/node-fetch/node-fetch">node-fetch</a>, but that makes it consistent and easier to use in TypeScript.</p>
+					<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+						<h2>Features</h2>
+					</a>
+					<ul>
+						<li>  Written in TypeScript</li>
+						<li>  Fully tested</li>
+						<li>  Exported <code>const enum</code> for the common return data types.</li>
+						<li>  Throws distinctive errors when the API returns a &quot;not ok&quot; status code to make them easier to understand.</li>
+						<li>  Enforces casting the return type when requesting JSON data, to ensure your return data is strictly typed.</li>
+					</ul>
+					<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+						<h2>Installation</h2>
+					</a>
+					<pre><code class="language-sh">yarn add @sapphire/fetch
+<span class="hljs-comment"># npm install @sapphire/fetch</span>
+</code></pre>
+					<a href="#node-fetch-types" id="node-fetch-types" style="color: inherit; text-decoration: none;">
+						<h3>Node-fetch types</h3>
+					</a>
+					<p>TypeScript users should also add <code>@types/node-fetch</code>:</p>
+					<pre><code class="language-sh">yarn add -D @types/node-fetch
+<span class="hljs-comment"># npm install -D @types/node-fetch</span>
+</code></pre>
+					<p>Alternatively, you can enable the <a href="https://www.typescriptlang.org/tsconfig/#skipLibCheck"><code>skipLibChecks</code></a> TypeScript compiler option</p>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h2>Usage</h2>
+					</a>
+					<p><strong>Note:</strong> While this section uses <code>import</code>, it maps 1:1 with CommonJS&#39; require syntax. For example, <code>import { fetch } from &#39;@sapphire/fetch&#39;</code> is the same as <code>const { fetch } = require(&#39;@sapphire/fetch&#39;)</code>.</p>
+					<p><strong>Note</strong>: <code>fetch</code> can also be imported as a default import: <code>import fetch from &#39;@sapphire/fetch&#39;</code>.</p>
+					<a href="#getting-json-data" id="getting-json-data" style="color: inherit; text-decoration: none;">
+						<h3><code>GET</code>ting JSON data</h3>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the fetch function</span>
+<span class="hljs-keyword">import</span> { fetch, FetchResultTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sapphire/fetch&#x27;</span>;
+
+<span class="hljs-keyword">interface</span> JsonPlaceholderResponse {
+    <span class="hljs-attr">userId</span>: <span class="hljs-built_in">number</span>;
+    id: <span class="hljs-built_in">number</span>;
+    title: <span class="hljs-built_in">string</span>;
+    completed: <span class="hljs-built_in">boolean</span>;
+}
+
+<span class="hljs-comment">// Fetch the data. No need to call `.json()` after making the request!</span>
+<span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fetch&lt;JsonPlaceholderResponse&gt;(<span class="hljs-string">&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;</span>, FetchResultTypes.JSON);
+
+<span class="hljs-comment">// Do something with the data</span>
+<span class="hljs-built_in">console</span>.log(data.userId);
+</code></pre>
+					<a href="#getting-buffer-data-images-etc" id="getting-buffer-data-images-etc" style="color: inherit; text-decoration: none;">
+						<h3><code>GET</code>ting Buffer data (images, etc.)</h3>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the fetch function</span>
+<span class="hljs-keyword">import</span> { fetch, FetchResultTypes } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sapphire/fetch&#x27;</span>;
+
+<span class="hljs-comment">// Fetch the data. No need to call `.buffer()` after making the request!</span>
+<span class="hljs-keyword">const</span> sapphireLogo = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">&#x27;https://github.com/sapphire-community.png&#x27;</span>, FetchResultTypes.Buffer);
+
+<span class="hljs-comment">// sapphireLogo is the `Buffer` of the image</span>
+<span class="hljs-built_in">console</span>.log(sapphireLogo);
+</code></pre>
+					<a href="#posting-json-data" id="posting-json-data" style="color: inherit; text-decoration: none;">
+						<h3><code>POST</code>ing JSON data</h3>
+					</a>
+					<pre><code class="language-ts"><span class="hljs-comment">// Import the fetch function</span>
+<span class="hljs-keyword">import</span> { fetch, FetchResultTypes, FetchMethods } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@sapphire/fetch&#x27;</span>;
+
+<span class="hljs-comment">// Fetch the data. No need to call `.json()` after making the request!</span>
+<span class="hljs-keyword">const</span> responseData = <span class="hljs-keyword">await</span> fetch(
+    <span class="hljs-string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>,
+    {
+        <span class="hljs-attr">method</span>: FetchMethods.Post,
+        <span class="hljs-attr">headers</span>: {
+            <span class="hljs-string">&#x27;Content-Type&#x27;</span>: <span class="hljs-string">&#x27;application/json&#x27;</span>
+        },
+        <span class="hljs-attr">body</span>: <span class="hljs-built_in">JSON</span>.stringify({
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John Doe&#x27;</span>
+        })
+    },
+    FetchResultTypes.JSON
+);
+
+<span class="hljs-comment">// Do something with the response data</span>
+<span class="hljs-built_in">console</span>.log(responseData);
+</code></pre>
+					<hr>
+					<a href="#api-documentation" id="api-documentation" style="color: inherit; text-decoration: none;">
+						<h2>API Documentation</h2>
+					</a>
+					<p>For the full API documentation please refer to the TypeDoc generated <a href="https://sapphire-community.github.io/utilities/modules/_sapphire_fetch.html">documentation</a>.</p>
+					<a href="#buy-us-some-doughnuts" id="buy-us-some-doughnuts" style="color: inherit; text-decoration: none;">
+						<h2>Buy us some doughnuts</h2>
+					</a>
+					<p>Sapphire Community is and always will be open source, even if we don&#39;t get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!</p>
+					<p>We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.</p>
+					<table>
+						<thead>
+							<tr>
+								<th align="center">Donate With</th>
+								<th align="center">Address</th>
+							</tr>
+						</thead>
+						<tbody><tr>
+								<td align="center">Open Collective</td>
+								<td align="center"><a href="https://sapphirejs.com/opencollective">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Ko-fi</td>
+								<td align="center"><a href="https://sapphirejs.com/kofi">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">Patreon</td>
+								<td align="center"><a href="https://sapphirejs.com/patreon">Click Here</a></td>
+							</tr>
+							<tr>
+								<td align="center">PayPal</td>
+								<td align="center"><a href="https://sapphirejs.com/paypal">Click Here</a></td>
+							</tr>
+					</tbody></table>
+					<a href="#contributors-✨" id="contributors-✨" style="color: inherit; text-decoration: none;">
+						<h2>Contributors ✨</h2>
+					</a>
+					<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+					<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+					<!-- prettier-ignore-start -->
+					<!-- markdownlint-disable -->
+					<table>
+						<tr>
+							<td align="center"><a href="https://favware.tech/"><img src="https://avatars3.githubusercontent.com/u/4019718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Claassens</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Favna" title="Code">💻</a> <a href="#infra-Favna" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#projectManagement-Favna" title="Project Management">📆</a> <a href="https://github.com/sapphire-community/utilities/commits?author=Favna" title="Documentation">📖</a> <a href="https://github.com/sapphire-community/utilities/commits?author=Favna" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/kyranet"><img src="https://avatars0.githubusercontent.com/u/24852502?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Román</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=kyranet" title="Code">💻</a> <a href="#projectManagement-kyranet" title="Project Management">📆</a> <a href="https://github.com/sapphire-community/utilities/pulls?q=is%3Apr+reviewed-by%3Akyranet" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-community/utilities/commits?author=kyranet" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/PyroTechniac"><img src="https://avatars2.githubusercontent.com/u/39341355?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gryffon Bellish</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=PyroTechniac" title="Code">💻</a> <a href="https://github.com/sapphire-community/utilities/pulls?q=is%3Apr+reviewed-by%3APyroTechniac" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/sapphire-community/utilities/commits?author=PyroTechniac" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/vladfrangu"><img src="https://avatars3.githubusercontent.com/u/17960496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Frangu</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=vladfrangu" title="Code">💻</a> <a href="https://github.com/sapphire-community/utilities/issues?q=author%3Avladfrangu" title="Bug reports">🐛</a> <a href="https://github.com/sapphire-community/utilities/pulls?q=is%3Apr+reviewed-by%3Avladfrangu" title="Reviewed Pull Requests">👀</a> <a href="#userTesting-vladfrangu" title="User Testing">📓</a> <a href="https://github.com/sapphire-community/utilities/commits?author=vladfrangu" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/Soumil07"><img src="https://avatars0.githubusercontent.com/u/29275227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Soumil07</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Soumil07" title="Code">💻</a> <a href="#projectManagement-Soumil07" title="Project Management">📆</a> <a href="https://github.com/sapphire-community/utilities/commits?author=Soumil07" title="Tests">⚠️</a></td>
+							<td align="center"><a href="https://github.com/apps/depfu"><img src="https://avatars3.githubusercontent.com/in/715?v=4?s=100" width="100px;" alt=""/><br /><sub><b>depfu[bot]</b></sub></a><br /><a href="#maintenance-depfu[bot]" title="Maintenance">🚧</a></td>
+							<td align="center"><a href="https://github.com/apps/allcontributors"><img src="https://avatars0.githubusercontent.com/in/23186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>allcontributors[bot]</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=allcontributors[bot]" title="Documentation">📖</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="https://github.com/Nytelife26"><img src="https://avatars1.githubusercontent.com/u/22531310?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler J Russell</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Nytelife26" title="Documentation">📖</a></td>
+							<td align="center"><a href="https://github.com/Alcremie"><img src="https://avatars0.githubusercontent.com/u/54785334?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ivan Lieder</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Alcremie" title="Code">💻</a> <a href="https://github.com/sapphire-community/utilities/issues?q=author%3AAlcremie" title="Bug reports">🐛</a></td>
+							<td align="center"><a href="https://github.com/RealShadowNova"><img src="https://avatars3.githubusercontent.com/u/46537907?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hezekiah Hendry</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=RealShadowNova" title="Code">💻</a></td>
+							<td align="center"><a href="https://github.com/Stitch07"><img src="https://avatars.githubusercontent.com/u/29275227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stitch07</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Stitch07" title="Code">💻</a></td>
+							<td align="center"><a href="https://github.com/Vetlix"><img src="https://avatars.githubusercontent.com/u/31412314?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vetlix</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=Vetlix" title="Code">💻</a></td>
+							<td align="center"><a href="https://github.com/ethamitc"><img src="https://avatars.githubusercontent.com/u/27776796?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ethan Mitchell</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=ethamitc" title="Documentation">📖</a></td>
+							<td align="center"><a href="https://github.com/noftaly"><img src="https://avatars.githubusercontent.com/u/34779161?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elliot</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=noftaly" title="Code">💻</a></td>
+						</tr>
+						<tr>
+							<td align="center"><a href="https://jurien.dev"><img src="https://avatars.githubusercontent.com/u/5418114?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jurien Hamaker</b></sub></a><br /><a href="https://github.com/sapphire-community/utilities/commits?author=jurienhamaker" title="Code">💻</a></td>
+						</tr>
+					</table>
+					<!-- markdownlint-restore -->
+					<!-- prettier-ignore-end -->
+					<!-- ALL-CONTRIBUTORS-LIST:END -->
+					<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+					<!-- LINKS -->
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_sapphire_fetch.fetchmethods.html" class="tsd-kind-icon">Fetch<wbr>Methods</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_sapphire_fetch.fetchresulttypes.html" class="tsd-kind-icon">Fetch<wbr>Result<wbr>Types</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_sapphire_fetch.queryerror.html" class="tsd-kind-icon">Query<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="_sapphire_fetch.html#fetch" class="tsd-kind-icon">fetch</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="fetch" class="tsd-anchor"></a>
+					<h3>fetch</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">fetch&lt;R&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#json" class="tsd-signature-type">JSON</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch&lt;R&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestInit</span>, type<span class="tsd-signature-symbol">?: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#json" class="tsd-signature-type">JSON</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#buffer" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestInit</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#buffer" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#text" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestInit</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#text" class="tsd-signature-type">Text</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#result" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestInit</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html#result" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch&lt;R&gt;<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestInit</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/_sapphire_fetch.fetchresulttypes.html" class="tsd-signature-type">FetchResultTypes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L18">packages/fetch/src/lib/fetch.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Performs an HTTP(S) fetch</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>R</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The URL to send the request to. Can be either a <code>string</code> or an <code>URL</code> object.
+										<code>url</code> should be an absolute url, such as <code>https://example.com/</code>. A path-relative URL (<code>/file/under/root</code>) or protocol-relative URL (<code>//can-be-http-or-https.com/</code>) will result in a rejected <code>Promise</code>.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#json" class="tsd-signature-type">JSON</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Only needs to be provided if the second parameter are <a href="https://github.com/node-fetch/node-fetch#options">node-fetch options</a>. One of the <a href="../enums/_sapphire_fetch.fetchresulttypes.html">FetchResultTypes</a> that will determine how the result is returned.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The return type is determined by the provided <code>type</code>.</p>
+							<ul>
+								<li>When using <code>FetchResultTypes.JSON</code> then the return type is <code>unknown</code> by default. The type should be specified by filling in the generic type of the function, or casting the result.</li>
+								<li>When using <code>FetchResultTypes.Buffer</code> the return type is always <a href="https://nodejs.org/api/buffer.html"><code>Buffer</code></a></li>
+								<li>When using <code>FetchResultTypes.Text</code> the return type is always <code>string</code></li>
+								<li>When using <code>FetchResultTypes.Result</code> the return type is always <a href="https://github.com/node-fetch/node-fetch#class-response"><code>Response</code></a></li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L19">packages/fetch/src/lib/fetch.ts:19</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>R</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">RequestInit</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#json" class="tsd-signature-type">JSON</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L20">packages/fetch/src/lib/fetch.ts:20</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#buffer" class="tsd-signature-type">Buffer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L21">packages/fetch/src/lib/fetch.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">RequestInit</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#buffer" class="tsd-signature-type">Buffer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L22">packages/fetch/src/lib/fetch.ts:22</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#text" class="tsd-signature-type">Text</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L23">packages/fetch/src/lib/fetch.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">RequestInit</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#text" class="tsd-signature-type">Text</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L24">packages/fetch/src/lib/fetch.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#result" class="tsd-signature-type">Result</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L25">packages/fetch/src/lib/fetch.ts:25</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">RequestInit</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html#result" class="tsd-signature-type">Result</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/sapphire-community/utilities/blob/891034c/packages/fetch/src/lib/fetch.ts#L26">packages/fetch/src/lib/fetch.ts:26</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>R</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">URL</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">RequestInit</span></h5>
+								</li>
+								<li>
+									<h5>type: <a href="../enums/_sapphire_fetch.fetchresulttypes.html" class="tsd-signature-type">FetchResultTypes</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Buffer</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_async_queue.html">@sapphire/async-<wbr>queue</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_decorators.html">@sapphire/decorators</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_discord_utilities.html">@sapphire/discord-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_discord_js_utilities.html">@sapphire/discord.js-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_embed_jsx.html">@sapphire/embed-<wbr>jsx</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_eslint_config.html">@sapphire/eslint-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_event_iterator.html">@sapphire/event-<wbr>iterator</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_sapphire_fetch.html">@sapphire/fetch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_prettier_config.html">@sapphire/prettier-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_ratelimits.html">@sapphire/ratelimits</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_snowflake.html">@sapphire/snowflake</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_stopwatch.html">@sapphire/stopwatch</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_time_utilities.html">@sapphire/time-<wbr>utilities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_ts_config.html">@sapphire/ts-<wbr>config</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_type.html">@sapphire/type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_sapphire_utilities.html">@sapphire/utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_sapphire_fetch.fetchmethods.html" class="tsd-kind-icon">Fetch<wbr>Methods</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_sapphire_fetch.fetchresulttypes.html" class="tsd-kind-icon">Fetch<wbr>Result<wbr>Types</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_sapphire_fetch.queryerror.html" class="tsd-kind-icon">Query<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_sapphire_fetch.html#fetch" class="tsd-kind-icon">fetch</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
