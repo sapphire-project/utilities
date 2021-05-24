@@ -26,7 +26,7 @@ export class StringStoreEntry {
 	}
 
 	public serialize(writer: UnalignedBufferWriter, ...parameters: readonly unknown[]): void {
-		let i = 0;
+		const i = 0;
 		for (const type of this.entries.values()) {
 			if (i >= parameters.length) writer.writeEmpty(type.size);
 			else type.serialize(writer, parameters[i]);

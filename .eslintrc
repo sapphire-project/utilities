@@ -2,6 +2,12 @@
 	"extends": ["./packages/eslint-config/dist/index.js"],
 	"overrides": [
 		{
+			"files": ["packages/string-store/src/lib/types/*.ts"],
+			"rules": {
+				"@typescript-eslint/no-namespace": 0
+			}
+		},
+		{
 			"files": ["packages/utilities/tests/*.test.ts"],
 			"rules": {
 				"@typescript-eslint/no-extraneous-class": 0
