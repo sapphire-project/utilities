@@ -27,8 +27,11 @@ export function Array<SType, DType>(type: IType<SType, DType>, length: number | 
 			return values;
 		},
 		serialize(buffer, values) {
-			const remaining = length;
-			for (const value of values) type.serialize(buffer, value);
+			let remaining = length;
+			for (const value of values) {
+				type.serialize(buffer, value);
+				remaining -= type.size;
+			}
 			buffer.writeEmpty(type.size * remaining);
 		}
 	};
