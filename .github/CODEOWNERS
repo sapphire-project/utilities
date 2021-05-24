@@ -7,6 +7,7 @@ packages/discord.js-utilities/src/lib/*PaginatedMessage* @kyranet @realshadownov
 /packages/ratelimits @kyranet @vladfrangu
 /packages/snowflake @favna @vladfrangu
 /packages/stopwatch @Soumil07 @kyranet @vladfrangu
+/packages/stopwatch @kyranet
 /packages/time-utilities @favna @Soumil07 @kyranet
 /packages/ts-config @favna
 /packages/type @kyranet

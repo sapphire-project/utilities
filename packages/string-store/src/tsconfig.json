@@ -1,0 +1,10 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"rootDir": "./",
+		"outDir": "../dist",
+		"composite": true
+	},
+	"files": ["index.ts"]
+}

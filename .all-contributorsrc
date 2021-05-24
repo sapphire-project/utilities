@@ -15,6 +15,7 @@
 		"packages/ratelimits/README.md",
 		"packages/snowflake/README.md",
 		"packages/stopwatch/README.md",
+		"packages/string-store/README.md",
 		"packages/time-utilities/README.md",
 		"packages/ts-config/README.md",
 		"packages/type/README.md",

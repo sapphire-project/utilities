@@ -19,6 +19,7 @@
 		"packages/fetch/src/index.ts",
 		"packages/ratelimits/src/index.ts",
 		"packages/snowflake/src/index.ts",
+		"packages/string-store/src/index.ts",
 		"packages/time-utilities/src/index.ts",
 		"packages/utilities/src/index.ts"
 	],

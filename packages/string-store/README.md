@@ -2,44 +2,79 @@
 
 ![Sapphire Logo](https://cdn.skyra.pw/gh-assets/sapphire-banner.png)
 
-# Sapphire Utilities
+# @sapphire/string-store
 
-**Common NodeJS packages for Sapphire Repositories and others.**
+**Conveniently store a lot of data into a very small payload**
 
 [![GitHub](https://img.shields.io/github/license/sapphiredev/utilities)](https://github.com/sapphiredev/utilities/blob/main/LICENSE.md)
 [![codecov](https://codecov.io/gh/sapphiredev/utilities/branch/main/graph/badge.svg?token=OEGIV6RFDO)](https://codecov.io/gh/sapphiredev/utilities)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@sapphire/string-store?logo=webpack&style=flat-square)](https://bundlephobia.com/result?p=@sapphire/string-store)
+[![npm](https://img.shields.io/npm/v/@sapphire/string-store?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@sapphire/string-store)
 [![Depfu](https://badges.depfu.com/badges/ec42ff3d6bae55eee1de4749960852b3/count.svg)](https://depfu.com/github/sapphiredev/utilities?project_id=15195)
-
-**Packages**
-
-[![npm](https://img.shields.io/npm/v/@sapphire/async-queue?color=crimson&logo=npm&style=flat-square&label=@sapphire/async-queue)](https://www.npmjs.com/package/@sapphire/async-queue)
-[![npm](https://img.shields.io/npm/v/@sapphire/decorators?color=crimson&logo=npm&style=flat-square&label=@sapphire/decorators)](https://www.npmjs.com/package/@sapphire/decorators)
-[![npm](https://img.shields.io/npm/v/@sapphire/discord-utilities?color=crimson&logo=npm&style=flat-square&label=@sapphire/discord-utilities)](https://www.npmjs.com/package/@sapphire/discord-utilities)
-[![npm](https://img.shields.io/npm/v/@sapphire/discord.js-utilities?color=crimson&logo=npm&style=flat-square&label=@sapphire/discord.js-utilities)](https://www.npmjs.com/package/@sapphire/discord.js-utilities)
-[![npm](https://img.shields.io/npm/v/@sapphire/embed-jsx?color=crimson&logo=npm&style=flat-square&label=@sapphire/embed-jsx)](https://www.npmjs.com/package/@sapphire/embed-jsx)
-[![npm](https://img.shields.io/npm/v/@sapphire/eslint-config?color=crimson&logo=npm&style=flat-square&label=@sapphire/eslint-config)](https://www.npmjs.com/package/@sapphire/eslint-config)
-[![npm](https://img.shields.io/npm/v/@sapphire/event-iterator?color=crimson&logo=npm&style=flat-square&label=@sapphire/event-iterator)](https://www.npmjs.com/package/@sapphire/event-iterator)
-[![npm](https://img.shields.io/npm/v/@sapphire/prettier-config?color=crimson&logo=npm&style=flat-square&label=@sapphire/prettier-config)](https://www.npmjs.com/package/@sapphire/prettier-config)
-[![npm](https://img.shields.io/npm/v/@sapphire/ratelimits?color=crimson&logo=npm&style=flat-square&label=@sapphire/fetch)](https://www.npmjs.com/package/@sapphire/fetch)
-[![npm](https://img.shields.io/npm/v/@sapphire/ratelimits?color=crimson&logo=npm&style=flat-square&label=@sapphire/ratelimits)](https://www.npmjs.com/package/@sapphire/ratelimits)
-[![npm](https://img.shields.io/npm/v/@sapphire/ratelimits?color=crimson&logo=npm&style=flat-square&label=@sapphire/stopwatch)](https://www.npmjs.com/package/@sapphire/stopwatch)
-[![npm](https://img.shields.io/npm/v/@sapphire/string-store?color=crimson&logo=npm&style=flat-square&label=@sapphire/string-store)](https://www.npmjs.com/package/@sapphire/string-store)
-[![npm](https://img.shields.io/npm/v/@sapphire/snowflake?color=crimson&logo=npm&style=flat-square&label=@sapphire/snowflake)](https://www.npmjs.com/package/@sapphire/snowflake)
-[![npm](https://img.shields.io/npm/v/@sapphire/time-utilities?color=crimson&logo=npm&style=flat-square&label=@sapphire/time-utilities)](https://www.npmjs.com/package/@sapphire/time-utilities)
-[![npm](https://img.shields.io/npm/v/@sapphire/ts-config?color=crimson&logo=npm&style=flat-square&label=@sapphire/ts-config)](https://www.npmjs.com/package/@sapphire/ts-config)
-[![npm](https://img.shields.io/npm/v/@sapphire/utilities?color=crimson&logo=npm&style=flat-square&label=@sapphire/utilities)](https://www.npmjs.com/package/@sapphire/utilities)
 
 </div>
 
+**Table of Contents**
+
+-   [Description](#description)
+-   [Features](#features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [Basic Usage](#basic-usage)
+-   [API Documentation](#api-documentation)
+-   [Buy us some doughnuts](#buy-us-some-doughnuts)
+-   [Contributors ✨](#contributors-%E2%9C%A8)
+
+## Description
+
+Provides a set of methods and properties that you can use to accurately measure elapsed time.
+
+## Features
+
+-   Written in TypeScript
+-   Fully tested
+
+## Installation
+
+```sh
+yarn add @sapphire/string-store
+# npm install @sapphire/string-store
+```
+
+## Usage
+
+**Note:** While this section uses `require`, the imports match 1:1 with ESM imports. For example `const { StringStore } = require('@sapphire/string-store')` equals `import { StringStore } from '@sapphire/string-store'`.
+
+### Basic Usage
+
+```ts
+// Import the StringStore class
+const { StringStore, Types } = require('@sapphire/string-store');
+
+// Create a new StringStore
+const store = new StringStore()
+	.add('pair', (builder) => builder.add('user', Types.Snowflake).add('target', Types.Snowflake))
+	.add('connect-four', (builder) => builder.add('user', Types.Snowflake).add('target', Types.Snowflake).add('board', Types.Array(Types.Bit2, 42)));
+
+const raw = store.serialize('pair', '242043489611808770', '266624760782258187');
+console.log(raw.length);
+// -> 17
+
+const value = store.deserialize(raw);
+// -> { type: 'pair', user: '242043489611808770', target: '266624760782258187' }
+```
+
+---
+
 ## API Documentation
 
-For the full API documentation please refer to the TypeDoc generated [documentation](https://sapphiredev.github.io/utilities/).
+For the full API documentation please refer to the TypeDoc generated [documentation](https://sapphiredev.github.io/utilities/modules/_sapphire_string_store.html).
 
 ## Buy us some doughnuts
 
 Sapphire Community is and always will be open source, even if we don't get donations. That being said, we know there are amazing people who may still want to donate just to show their appreciation. Thank you very much in advance!
 
-We accept donations through Open Collective, Ko-fi, Paypal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.
+We accept donations through Open Collective, Ko-fi, PayPal, Patreon and GitHub Sponsorships. You can use the buttons below to donate through your method of choice.
 
 |   Donate With   |                       Address                       |
 | :-------------: | :-------------------------------------------------: |
