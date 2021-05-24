@@ -1,7 +1,7 @@
 export abstract class IUnalignedBuffer {
 	protected readonly buffer: Uint8Array;
 	protected byteOffset = 0;
-	protected memoryBits = 0;
+	protected memoryBits = 0n;
 	protected memoryData = 0n;
 
 	public constructor(buffer: Uint8Array) {

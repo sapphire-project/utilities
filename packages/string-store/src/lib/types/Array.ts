@@ -32,7 +32,7 @@ export function Array<SType, DType>(type: IType<SType, DType>, length: number | 
 				type.serialize(buffer, value);
 				remaining -= type.size;
 			}
-			buffer.writeEmpty(type.size * remaining);
+			buffer.writeEmpty(BigInt(type.size * remaining));
 		}
 	};
 

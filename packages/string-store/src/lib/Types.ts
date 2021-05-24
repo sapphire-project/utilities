@@ -6,6 +6,7 @@ export * from './types/Boolean';
 export * from './types/Float32';
 export * from './types/Float64';
 export * from './types/Snowflake';
+export * from './types/String';
 export * from './types/Uint8';
 export * from './types/Uint16';
 export * from './types/Uint32';

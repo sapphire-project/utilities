@@ -2,69 +2,74 @@ import { Bit, Bit2, Bit4, IUnalignedBuffer } from './IUnalignedBuffer';
 
 export class UnalignedBufferReader extends IUnalignedBuffer {
 	public readBit(): Bit {
-		if (this.memoryBits < 1) this.ensureByte();
-
-		const bit = this.memoryData & 0b01n;
-		this.advanceBits(1);
-
-		return bit as Bit;
+		return this.read(1n) as Bit;
 	}
 
 	public readBit2(): Bit2 {
-		if (this.memoryBits < 2) this.ensureByte();
-
-		const bits = this.memoryData & 0b11n;
-		this.advanceBits(2);
-
-		return bits as Bit2;
+		return this.read(2n) as Bit2;
 	}
 
 	public readBit4(): Bit4 {
-		if (this.memoryBits < 4) this.ensureByte();
-
-		const bits = this.memoryData & 0b1111n;
-		this.advanceBits(4);
-
-		return bits as Bit4;
+		return this.read(4n) as Bit4;
 	}
 
 	public readBit8(): bigint {
-		if (this.memoryBits < 8) this.ensureByte();
-
-		const bits = this.memoryData & 0b1111_1111n;
-		this.advanceBits(8);
-
-		return bits;
+		return this.read(8n);
 	}
 
 	public readBit16(): bigint {
-		if (this.memoryBits < 8) this.ensureByte();
-		if (this.memoryBits < 16) this.ensureByte();
-
-		const bits = this.memoryData & 0b1111_1111_1111_1111n;
-		this.advanceBits(16);
-
-		return bits;
+		return this.read(16n);
 	}
 
 	public readBit32(): bigint {
-		const bits = (this.readBit16() << 16n) | this.readBit16();
-		return bits;
+		return this.read(32n);
 	}
 
 	public readBit64(): bigint {
-		const bits = (this.readBit32() << 32n) | this.readBit32();
-		return bits;
+		return this.read(64n);
+	}
+
+	private read(bits: Size) {
+		this.ensureBytes(bits);
+		const value = this.memoryData >> (this.memoryBits - bits);
+		this.advanceBits(bits);
+
+		return value;
+	}
+
+	private ensureBytes(bits: Size) {
+		while (this.memoryBits < bits) this.ensureByte();
 	}
 
 	private ensureByte() {
 		this.memoryData <<= 8n;
 		this.memoryData |= BigInt(this.buffer[this.byteOffset++]);
-		this.memoryBits += 8;
+		this.memoryBits += 8n;
 	}
 
-	private advanceBits(bits: number) {
-		this.memoryData >>= BigInt(bits);
+	private advanceBits(bits: Size) {
+		this.memoryData &= ~(this.getMask(bits) << (this.memoryBits - bits));
 		this.memoryBits -= bits;
 	}
+
+	private getMask(bits: Size) {
+		switch (bits) {
+			case 1n:
+				return 0b0001n;
+			case 2n:
+				return 0b0011n;
+			case 4n:
+				return 0x000fn;
+			case 8n:
+				return 0x00ffn;
+			case 16n:
+				return 0xffffn;
+			case 32n:
+				return 0xffff_ffffn;
+			case 64n:
+				return 0xffff_ffff_ffff_ffffn;
+		}
+	}
 }
+
+type Size = 1n | 2n | 4n | 8n | 16n | 32n | 64n;
