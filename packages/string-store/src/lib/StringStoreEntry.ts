@@ -4,11 +4,13 @@ import type { IType } from './types/IType';
 
 export class StringStoreEntry {
 	public readonly id: bigint;
+	public readonly name: string;
 	public size = 0;
 	private readonly entries = new Map<string, IType>();
 
-	public constructor(id: bigint) {
+	public constructor(id: bigint, name: string) {
 		this.id = id;
+		this.name = name;
 	}
 
 	public add(name: string, type: IType) {
@@ -34,7 +36,7 @@ export class StringStoreEntry {
 	}
 
 	public deserialize(reader: UnalignedBufferReader): Record<string, unknown> {
-		const entries: [string, unknown][] = [];
+		const entries: [string, unknown][] = [['type', this.name]];
 		for (const [name, type] of this.entries.entries()) {
 			entries.push([name, type.deserialize(reader)]);
 		}

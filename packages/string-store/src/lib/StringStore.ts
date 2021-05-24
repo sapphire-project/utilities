@@ -12,8 +12,8 @@ export class StringStore {
 	}
 
 	public add(name: string, cb: (entry: StringStoreEntry) => void): this {
-		const entry = new StringStoreEntry(BigInt(this.names.size));
-		this.names.set(name, entry);
+		const entry = new StringStoreEntry(BigInt(this.names.size), name);
+		this.names.set(entry.name, entry);
 		this.ids.set(entry.id, entry);
 
 		cb(entry);
