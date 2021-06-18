@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FunctionFallback | Sapphire Utilities</title>
+	<title>NonNullObject | Sapphire Utilities</title>
 	<meta name="description" content="Documentation for Sapphire Utilities">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,13 +52,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_sapphire_decorators.html">@sapphire/decorators</a>
+					<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
 				</li>
 				<li>
-					<a href="_sapphire_decorators.functionfallback.html">FunctionFallback</a>
+					<a href="_sapphire_utilities.nonnullobject.html">NonNullObject</a>
 				</li>
 			</ul>
-			<h1>Interface FunctionFallback</h1>
+			<h1>Interface NonNullObject</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>The fallback interface, this is called when the function precondition returns or resolves with a falsy value.</p>
+						<p>An object that is non nullable, to bypass TypeScript not easily working with {@link Record}&lt;{@link PropertyKey}, unknown&gt; in various instances.</p>
 					</div>
 				</div>
 			</section>
@@ -76,34 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FunctionFallback</span>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-module">
-					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/sapphiredev/utilities/blob/5dfb668/packages/decorators/src/utils.ts#L14">packages/decorators/src/utils.ts:14</a></li>
-							</ul>
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>The arguments passed to the function or class&#39; method.</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+						<span class="target">NonNullObject</span>
 					</li>
 				</ul>
 			</section>
@@ -117,7 +90,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_async_queue.html">@sapphire/async-<wbr>queue</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_decorators.html">@sapphire/decorators</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -156,7 +129,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_sapphire_ts_config.html">@sapphire/ts-<wbr>config</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_sapphire_utilities.html">@sapphire/utilities</a>
 					</li>
 				</ul>
@@ -166,31 +139,10 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_decorators.functionfallback.html" class="tsd-kind-icon">Function<wbr>Fallback</a>
+						<a href="_sapphire_utilities.nonnullobject.html" class="tsd-kind-icon">Non<wbr>Null<wbr>Object</a>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="_sapphire_decorators.functionprecondition.html" class="tsd-kind-icon">Function<wbr>Precondition</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/_sapphire_decorators.html#applyoptions" class="tsd-kind-icon">Apply<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../modules/_sapphire_decorators.html#createclassdecorator" class="tsd-kind-icon">create<wbr>Class<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_sapphire_decorators.html#createfunctionprecondition" class="tsd-kind-icon">create<wbr>Function<wbr>Precondition</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_sapphire_decorators.html#createmethoddecorator" class="tsd-kind-icon">create<wbr>Method<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_sapphire_decorators.html#enumerable" class="tsd-kind-icon">enumerable</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_sapphire_decorators.html#enumerablemethod" class="tsd-kind-icon">enumerable<wbr>Method</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
