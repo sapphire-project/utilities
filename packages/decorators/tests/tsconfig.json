@@ -6,5 +6,5 @@
 		"tsBuildInfoFile": "../test-dist/.tsbuildinfo"
 	},
 	"include": [".", "../src/**/*"],
-	"references": [{ "path": "../src" }]
+	"references": [{ "path": "../" }]
 }

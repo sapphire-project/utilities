@@ -7,5 +7,5 @@
 		"noImplicitAny": false
 	},
 	"include": ["./"],
-	"references": [{ "path": "../src" }]
+	"references": [{ "path": "../" }]
 }

@@ -7,5 +7,5 @@
 		"tsBuildInfoFile": "./build/.tsbuildinfo"
 	},
 	"include": ["./"],
-	"references": [{ "path": "../src" }]
+	"references": [{ "path": "../" }]
 }

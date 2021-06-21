@@ -1,9 +1,12 @@
 {
 	"extends": "../ts-config/src/tsconfig.json",
 	"compilerOptions": {
+		"target": "ES2020",
 		"module": "ESNext",
-		"outDir": "build",
-		"rootDir": "src"
+		"rootDir": "src",
+		"outDir": "dist",
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"composite": true
 	},
 	"include": ["src"]
 }

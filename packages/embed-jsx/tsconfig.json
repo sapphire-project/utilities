@@ -1,8 +1,10 @@
 {
 	"extends": "../ts-config/src/tsconfig",
 	"compilerOptions": {
-		"outDir": "build",
 		"rootDir": "src",
+		"outDir": "dist",
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+		"composite": true,
 		"jsx": "react",
 		"jsxFactory": "EmbedJsx.make"
 	},

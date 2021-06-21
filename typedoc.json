@@ -22,9 +22,6 @@
 		"packages/time-utilities/src/index.ts",
 		"packages/utilities/src/index.ts"
 	],
-	"mode": "modules",
 	"excludeExternals": true,
-	"excludeNotExported": true,
-	"stripInternal": true,
 	"tsconfig": "./tsconfig.dev.json"
 }

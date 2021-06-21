@@ -15,7 +15,7 @@
 		"test": "jest",
 		"prelint": "yarn test && yarn build",
 		"lint": "eslint src tests --ext ts --fix -c dist/index.js",
-		"build": "tsc -b src",
+		"build": "tsc -b .",
 		"prepublishOnly": "yarn build"
 	},
 	"dependencies": {

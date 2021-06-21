@@ -16,7 +16,7 @@
 	"scripts": {
 		"test": "jest",
 		"lint": "eslint src tests --ext ts,tsx --fix -c ../../.eslintrc",
-		"build": "tsc -b src",
+		"build": "tsc -b .",
 		"postbuild": "gen-esm-wrapper dist/index.js dist/index.mjs",
 		"prepublishOnly": "yarn build"
 	},

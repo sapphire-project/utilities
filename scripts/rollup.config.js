@@ -42,7 +42,7 @@ const createRollupConfig = (options) => {
 				targets: ['./dist/']
 			}),
 			...plugins,
-			typescript({ tsconfig: resolveDir(process.cwd(), 'src', 'tsconfig.json') })
+			typescript({ tsconfig: resolveDir(process.cwd(), 'tsconfig.json') })
 		],
 		...extraOptions
 	};
